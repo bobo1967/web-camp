@@ -1,0 +1,38 @@
+#FOOTER {
+    height: 300px; width: 100%;
+    background-color: rgba(201, 203, 196, 1);
+    margin: 0; padding: 0;
+}
+#footer_title h1{
+    color: white;
+    line-height: 150px;
+
+}
+#footer_title .dot{
+    background-color: #fff;
+
+}
+#footer_content {
+    height: auto; width: 65%;
+    text-align: center;
+    margin: 40px auto 0 auto; padding: 0;
+
+    
+
+    
+}
+#footer_content p{
+    font-size: 15px;
+    margin: 0 auto; padding: 0;
+    color: white;
+    line-height: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#footer_content h5 {
+
+    font-size: 12px;
+    color: white;
+    margin: 0; padding: 0;
+    margin-top: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

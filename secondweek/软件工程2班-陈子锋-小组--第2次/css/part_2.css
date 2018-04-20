@@ -1,0 +1,122 @@
+#part_2 {
+    background-color: snow;
+    height: auto;
+    width: 100%;
+    margin: 0; padding: 0;
+}
+#part_2 a{
+    display: block;
+}
+/*每部分的标题部分*/
+.part_title {
+    padding: 0; margin: 0; 
+    width: 100%; height: auto;
+    text-align: center;
+}
+.part_title h1{
+    margin: 0;
+    font-size: 80px;
+    color:  #c9cbc4;
+    font-weight: 800;
+    line-height: 170px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.dot_content {
+    width: 100%; height: 100px;
+    margin: 0; height: 0;
+    margin-top: -30px;
+}
+.dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background-color:  #c9cbc4;
+    margin: 0 20px 0 20px;
+}
+#part_2_container {
+    width: 1000px; height: 700px;
+    margin: 0 auto; padding: 0;
+}
+#part_2_content {
+    height: 100%; width: 100%;
+    margin: 0; padding: 80px 0 80px 0;
+    margin-top: 30px;
+    vertical-align: middle;
+}
+#part_2_left {
+    width: 42%; height: auto;
+    display: inline-block;
+    text-align: right;
+}
+#part_2_left_content {
+    height: 360px; width:360px;
+    border-radius: 50%;
+    display: inline-block;
+    background: url(../image/img1.jpg) no-repeat center;
+    background-size: cover;
+}
+#part_2_right {
+    width: 52%; height: 380px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 6%;
+    color:#afb1aa;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#part_2_right h1 {
+    font-size: 70px;
+    margin: 0; padding: 0;
+}
+#part_2_right h2 {
+    font-size: 40px;
+    margin: 0; padding: 0;
+}
+#part_2_right p {
+    width: 430px;
+    font-size: 12px;
+    line-height: 25px;
+    margin: 0; padding: 0;
+    margin-top: 10px;
+    white-space: normal;
+}
+#icon_1_ul {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 80px;
+    text-align: center;
+    margin-top: 20px; padding: 0;
+}
+.icon_1 {
+    display: inline-block;
+    width: 130px; height: 130px;
+    border-radius: 50%;
+    transition: background-size 0.2s; 
+    text-align: center; 
+    margin: 0 20px 0 0 ; padding: 0;
+    transition: background-color 0.5s;
+}
+.icon_1 span {
+    color: white;
+    font-size: 16px;
+    line-height: 130px;
+    word-spacing: 0;
+}
+#icon_1_1 {
+    background-color: red;
+}
+#icon_1_1:hover {
+    background-color: #9c221f;
+}
+#icon_1_2 {
+    background-color: rgba(97, 208, 212, 1);
+}
+#icon_1_2:hover {
+    background-color: rgb(77, 162, 165);
+}
+#icon_1_3 {
+    background-color: rgb(230, 222, 17);
+}
+#icon_1_3:hover {
+    background-color: rgb(138, 185, 44); 
+}

@@ -1,0 +1,70 @@
+#part_4 {
+    background-color: black;
+    height: auto;
+    width: 100%;
+    opacity: 0.6;
+    margin: 0; padding: 0;
+    border-top: 2px solid transparent;
+}
+#part_4_container {
+    height: 300px; width: 100%;
+    text-align: center;
+}
+#part_4_header {
+    width: auto; height: auto;
+    margin: 0 auto; padding: 0;
+}
+#part_4_header p {
+    font-size: 20px;
+    color: white;
+    font-weight: 100;
+    font-family: 'HelveticaNeueW01-45Ligh',Helvetica,Arial,sans-serif;
+    word-spacing: 20px;
+    letter-spacing: 5px;
+    line-height: 3em;
+}
+#part_4_header_line {
+    height: 2px; width: 250px;
+    margin: 0 auto; padding: 0;
+    background-color: #fff;
+}
+#part_4_content {
+    margin: 0 auto; padding: 0;
+    width: 80%; height: 80%;
+}
+#part_4_content ul {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; padding: 0;
+    margin-top: 80px;
+}
+#part_4_content a {
+    display: inline-block;
+    width: 70px;
+    margin: 0 60px 0 60px;
+}
+.icon {
+    width: 70px; height: 70px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: background-size 0.2s; 
+}
+#wechat {
+    background: url(../image/wechat.png) no-repeat center;
+    background-size: 50%; 
+}
+#wechat:hover,#weibo:hover, #mail:hover, #phone:hover  {
+    background-size: 55%;
+}
+#weibo {
+    background: url(../image/weibo.png) no-repeat center;
+    background-size: 50%;
+}
+#mail {
+    background: url(../image/mail.png) no-repeat center;
+    background-size: 50%;
+}
+#phone {
+    background: url(../image/phone.png) no-repeat center;
+    background-size: 50%;
+}

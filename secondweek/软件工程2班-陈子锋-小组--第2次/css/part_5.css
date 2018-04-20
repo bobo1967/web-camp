@@ -1,0 +1,99 @@
+#part_5 {
+    background-color: snow;
+    height: auto;
+    width: 100%;
+}
+#part_5_container {
+    width: 700; height: 1240px;
+    margin: 0 auto; padding: 0;
+    text-align: center;
+}
+#part_5_content {
+    margin: 0 auto;
+    width: 700px; height: 750px;
+}
+.part_5_img {
+    display: inline-block;
+    height: 140px; width: 200px;
+    margin-top: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+#img1 {
+    background: url(../image/img1.jpg) no-repeat center;
+    background-size: cover;
+
+}
+#img2 {
+    background: url(../image/img2.jpg) no-repeat center;
+    background-size: cover;
+
+}
+#img3 {
+    background: url(../image/img3.jpg) no-repeat center;
+    background-size: cover;
+
+}
+#img4 {
+    background: url(../image/img4.jpg) no-repeat center;
+    background-size: cover;
+    height: 330px;
+}
+#img5{
+    background: url(../image/img5.jpg) no-repeat center;
+    background-size: cover;
+    height: 360px;
+}
+#img6{
+    background: url(../image/img6.jpg) no-repeat center;
+    background-size: cover;
+    height: 330px;
+}
+#img7{
+    background: url(../image/img7.jpg) no-repeat center;
+    background-size: cover;
+    width: 280px;   
+}
+#img8{
+    background: url(../image/img8.jpg) no-repeat center;
+    background-size: cover;
+    width: 320px;
+}
+#part_5_button {
+    height: 42px; width: 140px;
+    margin: 20px auto; padding: 0;
+    border: 2px solid rgba(201, 203, 196, 1);
+    border-radius: 5px;
+    font-size: 21px;
+    line-height: 45px;
+    transition: border-color 1s, color 1s;
+    display: block;
+    color: rgba(201, 203, 196, 1);
+}
+
+#part_5_button:hover {
+    border-color: #9c221f;
+    color: #9c221f;
+}
+#part_5 article {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #9c221f;
+    width: 600px;
+    margin: 50px auto 30px auto;
+
+}
+#part_5 h2 {
+    font-size: 20px;
+    line-height: 2.5em;
+    margin: 0; padding: 0;
+    text-align: center;
+}
+#part_5_line {
+    width: 70px; height: 2px;
+    margin: 0 auto 16px auto; padding: 0;
+    background-color: #9c221f;
+}
+#part_5 span {
+    font-size: 13px;
+    line-height: 1.8em;
+}
