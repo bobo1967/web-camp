@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "queue.h"
+#include "头文件/queue.h"
 #include "queue.c"
 #include <stddef.h>
 #include <stdlib.h>
@@ -60,13 +60,13 @@ void runAQueue(AQueue *Q) {
             printf("请输入正确的选择！\n");
         fflush(stdin);
 	}
+	
 	while('q' != choice) {
 		switch (choice) {
 			case 'a': {//***************判断队列是否为空***************
-				if (IsEmptyAQueue(Q)) {
+				if (IsEmptyAQueue(Q)) 
 			  		printf("当前队列为空\n");
-			  		break;
-				} else
+				else
 					printf("当前队列不为空\n");
 					break;
 			}
@@ -92,43 +92,39 @@ void runAQueue(AQueue *Q) {
 					}
 				} 
 				fflush(stdin);
-				if (TRUE == EnAQueue(Q, data)) {
+				if (TRUE == EnAQueue(Q, data)) 
 					printf("入队成功！\n");
-					print();
-					break;
-				} else
+				else
 					printf("队列已满,入队失败\n");
-					break;
+				break;
 			}
 			case 'c': {//***************出队***************
-				if (TRUE == DeAQueue(Q)) {
+				if (TRUE == DeAQueue(Q)) 
 				 	printf("出队成功！\n");
-	            } else
+	            else
 					printf("队列为空,出队失败\n");
-					print();
-					break;
+				break;
 			}
 			case 'd': {//***************得到队头元素***************
-				if(!GetHeadAQueue(Q, data_2))
+				if(!GetHeadAQueue(Q, data_2)) {
 					printf("队列为空！\n"); 
+					break; 
+				}
 				if ('a' == CHOICE)
 					printf("%lf\n", *(double *)data_2);
 				if ('b' == CHOICE)
 					printf("%d\n", *(int *)data_2);
 				if ('c' == CHOICE)
-					printf("%c\n", *(char *)data_2);
-				print();	
+					printf("%c\n", *(char *)data_2);	
 				break;
 			}
 			case 'e': {//***************检测队列长度***************
 				printf("当前队列长度为%d\n", LengthAQueue(Q));
-				print();
 				break;
 			}
 			case 'f': {
 				if (!TraverseAQueue(Q, APrint))
 					printf("这是一个空队列！\n");
-				print();
 				break;
 			}
 			case 'g': {//***********b****清空队列***************
@@ -146,6 +142,7 @@ void runAQueue(AQueue *Q) {
 			    return;
 			}		
 		}
+		print(); 
 		while (1) {
             scanf("%c", &choice);
             flag = getchar();

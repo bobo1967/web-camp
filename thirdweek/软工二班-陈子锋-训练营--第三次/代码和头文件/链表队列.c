@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "queue.h"
+#include "头文件/queue.h"
 #include "queue.c"
 #include <stddef.h>
 #include <stdlib.h>
@@ -91,26 +91,22 @@ void runLQueue(LQueue *Q) {
 					}
 				} 
 				fflush(stdin);
-				if (TRUE == EnLQueue(Q,  data) ) {
+				if (TRUE == EnLQueue(Q,  data) ) 
 					printf("入队成功！\n");
-					print();
-					break;
-				} else
+				else
 					printf("队列已满,入队失败\n");
-					break;
+				break;
 			}
 			case 'c': {//***************出队***************
-				if (TRUE == DeLQueue(Q)) {
+				if (TRUE == DeLQueue(Q)) 
 				 	printf("出队成功！\n");
-	            } else
+	            else
 					printf("队列为空,出队失败\n");
-					print();
-					break;
+				break;
 			}
 			case 'd': {//***************得到队头元素***************
 		        if(!GetHeadLQueue(Q, data_2)) {
 					printf("队列为空！\n");
-					print();
 					break;
 				}
 				if ('a' == CHOICE)
@@ -118,19 +114,16 @@ void runLQueue(LQueue *Q) {
 				if ('b' == CHOICE)
 					printf("%d\n", *(int *)data_2);
 				if ('c' == CHOICE)
-					printf("%c\n", *(char *)data_2);
-				print();	
+					printf("%c\n", *(char *)data_2);	
 				break;
 			}
 			case 'e': {//***************检测队列长度***************
 				printf("当前队列长度为%d\n", LengthLQueue(Q));
-				print();
 				break;
 			}
 			case 'f': {
 				if (!TraverseLQueue(Q, LPrint))
 					printf("这是一个空队列！\n");
-				print();
 				break;
 			}
 			case 'g': {//***************清空队列***************
@@ -148,6 +141,7 @@ void runLQueue(LQueue *Q) {
 			    return;
 			}		
 		}
+		print();
 		while (1) {
             scanf("%c", &choice);
             flag = getchar();

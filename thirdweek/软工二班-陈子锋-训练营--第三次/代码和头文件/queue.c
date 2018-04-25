@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "queue.h"
+#include "头文件/queue.h"
 #include <string.h>
 
 
 void InitAQueue(AQueue *Q)
 {
 	int i;
+	for (i = 0; i < MAXQUEUE; i++)
+		Q->data[i] = (void *)malloc(Q->data_size);
 	Q->front = 0;
 	Q->rear  = 0;
 }
@@ -20,10 +22,10 @@ Status IsFullAQueue(const AQueue *Q) {
 }
 
 Status EnAQueue(AQueue *Q, void *data) {
-	if (IsFullAQueue(Q))//判断队列是否满了 
+	if (IsFullAQueue(Q)) 
 		return FALSE;
 	Q->rear = (Q->rear+1) % MAXQUEUE;
-	Q->data[Q->rear] = data;
+	memcpy(Q->data[Q->rear], data, Q->data_size);
 	return TRUE;
 }
 
@@ -37,7 +39,7 @@ Status DeAQueue(AQueue *Q) {
 void DestoryAQueue(AQueue *Q) {
 	int i;
 	for (i = 0; i < MAXQUEUE; i++)
-		Q->data[i] = NULL;
+		free(Q->data[i]);
 	return;
 }
 
@@ -54,9 +56,7 @@ Status GetHeadAQueue(AQueue *Q, void *e) {
 		return FALSE;
 	int i = Q->front; 
 	i = (i + 1) % MAXQUEUE;
-	e =Q->data[i];
-	//char *e = (char *)malloc(Q->data_size);
-	//memcpy(e, Q->data[i], Q->data_size);
+	memcpy(e, Q->data[i], Q->data_size);
 	return TRUE;
 }
 
@@ -65,11 +65,11 @@ int LengthAQueue(AQueue *Q) {
 }
 
 Status TraverseAQueue(const AQueue *Q, void (*foo)(void *q, int size)) { 
-	if (Q->front == Q->rear) //判断是否为空队列 
+	if (Q->front == Q->rear)
 		return FALSE;
-	int i = Q->front+1;
+	int i = Q->front + 1;
 	while (i <= (MAXQUEUE - Q->front + Q->rear) % MAXQUEUE ) {
-		foo(Q->data[i], Q->data_size);
+		foo(Q->data[i], Q->data_size);	
 		i = (i + 1) % MAXQUEUE;
 	}
 	printf("\n");
