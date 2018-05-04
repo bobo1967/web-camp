@@ -1,51 +1,48 @@
-
+#include <stdio.h>
+#include<stdlib.h>
 
 typedef struct stack {
 	int top;
 	int *elem;
 } stack;
-/************** 
+/******************************************
+                                         
+	方法：插入排序
 
-	插入排序
- 
-**************/
+	原理：从第二个数开始和它左边的数字比较 
+
+*******************************************/
 void InsertSort(int a[], int n) {
-	int i = 0, j = 0, temp = 0;
-	//clock_t start = clock();
+	int i = 0, j = 0, temp = 0; 
 	
 	for (i = 1; i < n; i++)
 	{
-		//如果后一个数大于前一个数，就已经是有序 
+		//找到a[i]左边比它大的数 
 		if (a[i] < a[i-1])
-		{//将前面的数右移，a[i]左移
+		{
 			temp = a[i];
-			//循环左边的序列，直到找到比a[i]小的数，将a[i]插在这个数的右边 
+			//将a[i] 和 比 左边他大的数交换位置 
 			for (j = i - 1; j >= 0 && a[j] > temp; j--)
 				a[j+1] = a[j];
 			a[j+1] = temp;
 		}
 	}
-	/*
-	printf("插入排序后的序列：\n"); 
-	for (i = 0; i < 10; i++)
-		printf("%d < ", a[i]);
-	*/
-	//clock_t diff = clock() - start; 
-	//printf("插入排序该序列用时：%lf s\n", (double)diff / 1000); 
+	 
 }
 
+/************************************************ 
 
-/*****************
-
-	归并排序
+	方法：归并排序
+	
+	原理：拆分为长度为1或者2的表，排序表然后合并 
  
-*****************/
+************************************************/
 void Merge(int *a, int low, int mid, int high) {
 	int i = low, j = mid + 1, p = 0;
 	//开辟一个同等大小的临时数组 
 	int *b = (int *)malloc((high - low + 1) * sizeof(int));
-	while (i < mid && j <= high)
-	{
+	while (i <= mid && j <= high)
+	{	//排序操作 
 		if (a[i] <= a[j]) 
 			b[p++] = a[i++];
 		else 
@@ -57,15 +54,16 @@ void Merge(int *a, int low, int mid, int high) {
 		
 	while (j <= high)
 		b[p++] = a[j++];
+	//赋值给原数组 
+	for (i = 0; i < p; i++)
+		a[low + i] = b[i];
 	
-	for (p = 0, i = low; i <= high;p++, i++)
-		a[i] = b[p];
-
+	free(b);
 } 
 
 
 void MergeSort(int *a, int low, int high) {
-	//分治法 
+	//从上往下划分表 
 	int mid;
 	if (low < high)
 	{
@@ -75,12 +73,13 @@ void MergeSort(int *a, int low, int high) {
 		Merge(a, low , mid ,high);
 	}
 }
-/*****************
+/***************************************************** 
 
-	快速排序
- 	非递归版本 
+	方法：快速排序 非递归版本
+	
+	原理： 将比枢轴大的数放在其右边，小的数放在其左边 
  	
-*****************/ 
+******************************************************/ 
 int push(stack *s, int value, int size) {
 	if (s->top < size) {
 		s->elem[s->top] = value;
@@ -113,12 +112,12 @@ void QSort(int a[], int low, int high) {
 	if (low < high)
 	{
 		middle = Partition(a, low, high);
-		if (low < middle - 1)
+		if (low < middle - 1)//如果middle - 1 == low，middle左边有序 
 		{
 			push(&s, low, size);
 			push(&s, middle - 1, size);
 		}
-		if (middle + 1 < high)
+		if (middle + 1 < high) //如果middle + 1 == high，middle右边有序 
 		{
 			push(&s, middle + 1, size);
 			push(&s, high, size);
@@ -142,33 +141,35 @@ void QSort(int a[], int low, int high) {
 	}
 }
 
-/*****************
+/***************************************************** 
 	
-	快速排序 
-	递归版本
+	方法：快速排序 递归版本
 	
-*****************/ 
-//划分算法 
+	原理： 将比枢轴大的数放在其右边，小的数放在其左边
+		
+*****************************************************/ 
+ 
 int Partition(int a[], int first, int last) {
 	int  temp;
 	int i = first, j = last;
-	//返回枢轴，一次划分算法。 
+ 	//假设a[0] 为枢轴 
 	while (i < j)
 	{
-		//进行右侧排序
-		//从末尾开始向前寻找直到找到最接近开头一个比末尾大的值 
+	
+		//从最右边开始，找到比枢轴小的值 
 		while ( (i < j) && (a[i] < a[j]) )
 			j--;
-		//如果找到了，就交换位置 
+		//如果找到了，就交换位置，没找到证明枢轴右边的数都比枢轴大 
 		if (i < j) 
 		{
 			temp = a[i];
 			a[i] = a[j];
 			a[j] = temp;
-			i++;//向后移一位 
+			i++; 
+			//此时第一个数已经比枢轴小，在枢轴的左边了 
 		}
-		//进行左侧的排序 
-		//找到最接近末尾一个比头元素小的值 
+	 
+		//此时枢轴是a[j]，从左边开始找到比枢轴大的值 
 		while ( (i < j) && (a[i] <= a[j]) ) 
 			i++;
 		//如果找到了就交换位置 
@@ -179,7 +180,8 @@ int Partition(int a[], int first, int last) {
 			a[j] = temp;
 			j--;//向前移一位 
 		} 
-	} 
+	}
+	//直到枢轴的左边的数字都比它小，右边的数都比它大。返回i == j，即是枢轴的位置 
 	return i;
 }
 
@@ -193,9 +195,13 @@ void Qsort_Recursion(int a[], int first, int last)  {
 		Qsort_Recursion(a, middle+1, last);
 	}	
 }
-/****************** 
-计数排序 
-******************/ 
+/************************************************** 
+ 
+	方法：计数排序
+	
+	原理：利用一个辅助数组统计，无需比较大小 
+	 
+***************************************************/ 
 void CountSort(int a[], int n, int max) {
 	int *b = (int *)malloc(sizeof(int) * max);//max为假设随机序列的最大值 
 	int *new = (int *)malloc(sizeof(int) * n);
@@ -226,11 +232,13 @@ void CountSort(int a[], int n, int max) {
 }	
 
 
-/****************** 
+/***************************************************** 
 
-	基数计数排序
-	 	   
-******************/
+	方法：基数计数排序
+	
+	原理：用一个二维数组来统计，对每一位进行计数排序	  
+		    
+******************************************************/
 //求从低到高的第pos位的数 
 int getBit(int num, int pos) {
 	int temp = 1;
@@ -255,7 +263,7 @@ void RadixCountSort(int *a, int n, int bit) {
 		{
 			int num = getBit(a[i], pos);
 			int index = ++bucket[num][0];
-			bucket[num][index] = a[i];	//数字越大位置越往右 
+			bucket[num][index] = a[i];	//往右填充数字 
 		} 	
 		for (i = 0, j = 0; i < 10; i++)
 		{
