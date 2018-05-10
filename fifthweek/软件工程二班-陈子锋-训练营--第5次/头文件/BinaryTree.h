@@ -19,9 +19,9 @@ typedef enum Status{
 } Status;
 
 
-Status InitBiTree(BiTree T);
+Status InitBiTree(BiTree *T);
 //操作结果：构造空二叉树T
-Status DestroyBiTree(BiTree T);
+Status DestroyBiTree(BiTree *T);
 //初始条件：二叉树T存在
 //操作结果：摧毁二叉树T
 Status CreateBiTree(BiTree T, char* definition);
@@ -35,10 +35,10 @@ Status PreOrderTraverse(BiTree T, void visit(BiTree p));
 //操作结果：先序遍历T，对每个结点调用visit函数一次且仅一次，一旦visit失败，则操作失败
 Status InOrderTraverse(BiTree T, void visit(BiTree p));	//中序遍历
 Status PostOrderTraverse(BiTree T, void visit(BiTree p));	//后序遍历
-Status LevelOrderTraverse(BiTree T, void visit(BiTree p));	//层序遍历
-int Value(BiTree T);			//构造出的二叉树求值
+Status LevelOrderTraverse(BiTree T, void (*foo)());	//层序遍历
+double Value(BiTree T);			//构造出的二叉树求值
 
-//void visit(BiTree p);
+void visit(BiTree p);
 
 /*
 提示：可在结点结构体中设置个Tag值标志数字与操作符来构造二叉树，
