@@ -1,0 +1,139 @@
+/*
+这里是顶部栏的css
+*/
+.outter-header {
+    position: fixed;
+    top: 0px;
+    width: 100%; height: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    z-index: 20000000000000000;
+}
+.banner-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 6px;
+    width: 80%;
+    margin: 0 auto;
+}
+.blog-logo {
+    display: block;
+    font-size: 30px;
+    color: #593123;
+    font-weight: 600;
+    height: 40px;
+    width: auto;
+    cursor: pointer;
+}
+.blog-logo img{
+    height: 100%;
+    vertical-align: bottom;    
+}
+.header-navigation {
+
+}
+.search-container {
+    background-color: #f6f6f6;
+    border: 1px solid #d4e2e9;
+    border-radius: 5px;
+    height: 35px; width: auto;
+    margin: 5px;
+}
+#search-bar {
+    height: 100%; width: 200px;
+    margin-left: 5px;
+    padding: 10px;
+    background: transparent;
+}
+#search-button {
+    height: 21px; width: 40px;
+    
+    cursor: pointer;  
+    background-color: transparent;
+
+}
+#search-icon {
+    height: 21px;
+}
+.show-search {
+    height: 200px; width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(26,26,26,.2);
+    display: none;
+}
+.user-container {
+    
+    height: 40px;
+    width: 40px;
+    position: relative;
+    margin:  ;
+}
+.first-menu {
+    border-radius: 50%;
+    border: 1px solid #666;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-image: url(../image/info.png);
+    background-size: 40px 40px;
+    cursor: pointer;
+    display: block;
+}
+.second-menu {
+    position: absolute;
+    top: 67px; left: -41px;
+    height: auto; width: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.2);
+    display: none;
+    user-select: none;
+}  
+.second-menu::before {
+    content: " ";
+    height: 0; width: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: -20px;
+    left: 56px;
+     
+}
+   
+
+
+.second-menu ul {
+    height: auto;
+    margin: 10px auto;
+    width: auto;
+}
+.second-menu li {
+    width: 140px;
+    height: 47px;
+    text-align: center;
+    margin: 0 auto;
+    transition: background-color .3s, padding .7s;
+    
+}
+.second-menu a {
+    display: inline-block;
+    width: 100%;
+    line-height: 50px;
+}
+.second-menu li:hover {
+    background-color: #ecf1f5;
+}
+.second-menu-icon {
+    height: 18px;
+    padding-right: 6px;
+    padding-bottom: 2px;
+    vertical-align: middle;
+    
+}

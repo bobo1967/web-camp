@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>editblog</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/editblog.css">
+    
+    <script src="../script/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <div class="root">
+        <header role="banner" class="outter-header">
+            <div class="banner-container">
+                    <a class="blog-logo" href="#">
+                        
+                    </a>    
+                <button id="post" class="edit-button">立刻发布
+                    <div class="before">
+
+                    </div>
+                </button>    
+            </div>
+        </header>
+        <main>
+            <div class="main-container">
+                <div class="box1">
+                <div class="title-container">
+                    <input type="text" placeholder="请输入标题">
+
+                    
+                    <button id="view" class="edit-button">预览文章</button>
+                    <button id="save" class="edit-button">保存为草稿</button>
+                </div>
+                <nav class="toolbar-container">
+                    <div id="toolbar">
+
+                    </div>
+                </nav>
+                </div>
+                <div class="editor-container">
+                    
+                        <div id="editor">
+
+                        </div>
+                
+                </div>     
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+    <script type="text/javascript" src="../script/wangEditor.js"></script>
+    <script type="text/javascript">
+        var E = window.wangEditor
+        var editor = new E('#toolbar', '#editor')
+        editor.customConfig.menus = 
+        [
+            'head',  // 标题
+            'bold',  // 粗体
+            'fontSize',  // 字号
+            'italic',  // 斜体
+            'underline',  // 下划线
+            'strikeThrough',  // 删除线
+            'foreColor',  // 文字颜色
+            'backColor',  // 背景颜色
+            'link',  // 插入链接
+            'list',  // 列表
+            'justify',  // 对齐方式
+            'quote',  // 引用
+            'image',  // 插入图片
+            'code',  // 插入代码
+            'undo',  // 撤销
+            'redo'  // 重复
+
+        ]
+
+        editor.create()
+        
+        editor.customConfig.onchange = function(html){
+            alert();
+                    //获取editor的html值
+                     var html = editor.$txt.html();
+                     $("#show_box").html(html)
+        }
+        
+
+
+    </script>
+</body>
+</html>

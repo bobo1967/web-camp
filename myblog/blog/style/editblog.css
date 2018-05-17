@@ -1,0 +1,133 @@
+body{
+    background-color: #fff;
+}
+
+.outter-header {
+    position: fixed;
+    top: 0px;
+    width: 100%; height: auto;
+    
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    z-index: 1000000;
+}
+.banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+.blog-logo {
+    display: block;
+    background-color: #666;
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.main-container {
+    padding-top: 150px;
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    
+}
+
+.editor-container{
+    position: relative;
+    
+    border: 1px solid #f6f6f6;
+    
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    margin: 10px auto;
+
+}
+.toolbar-container {
+    
+   
+    line-height: 40px;
+    height: 44px;
+    background-color: #fff;
+    border-bottom: 1px solid #f6f6f6;
+    margin: 0 auto;
+    width: 70%;
+}
+
+#editor {
+    width: 103%;    
+    height: 100%;
+    height: 400px;
+   
+    
+}
+.box1 {
+   position: sticky;
+   top: 74px;
+   z-index: 20000000000000000;
+   
+}
+.title-container {
+    
+    
+    height: auto;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-bottom: 1px solid #f6f6f6;
+
+}
+.title-container  input{
+    height: 40px;
+    padding: 10px;
+    
+    font-size: 30px;
+    
+}
+
+
+
+#post:hover { 
+    color: #fff;
+    
+}
+#post:hover .before {
+    opacity: 1;
+    -webkit-transform: scale(10);
+    transform: scale(10);
+}
+#post {
+    color: #ed2553;
+    overflow: hidden;
+    border: 2px solid #ed2553;
+    width: 92px; height: 41px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border-radius: 7px;
+    background-color: transparent;
+    position: relative;
+}
+.before {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%;
+    margin: -11px 0 0 -11px;
+    border-radius: 50%;
+    background-color: #ed2553;
+    height: 20px; width: 20px;
+    transition: .3s ease;
+    opacity: 0;
+    z-index: -1;
+}
+
+
+
+
+
+
+

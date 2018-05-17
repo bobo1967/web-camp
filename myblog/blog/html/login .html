@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css" />
+    <script type="text/javascript" src="../script/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <main>
+            <div class="nav-container">
+                <div class="slogen-container">
+                    <h1 id="slogen">
+                    加入我们，打造属于自己的个人博客
+                    </h1>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="switchContainer">
+                            <button class="switch" id="switchLogin">登陆</button>
+                            <button class="switch visiable" id="switchSignnin">注册</button>
+                </div>
+                <div class="container ">
+                    <form action="http://localhost:8080/myblog/LoginServelet" method="POST" name="loginForm">
+                        <dl>
+                            <dd class="input_container">
+                                <div class="blank">
+                                    <span>账号</span> 
+                                    <img src="../image/account.png">
+                                </div>
+                                <input class="input" id="login-account" placeholder="请输入邮箱或者手机号" type="text" autocomplete="off"/>
+                                <div class="msgContainer">
+                                    <p class="msg-login">请输入正确的手机或者邮箱</p>
+                                </div>
+                            </dd>
+                            <dd class="input_container">
+                                <div class="blank">
+                                    <span>密码</span>
+                                    <img src="../image/password.png">
+                                    <a href="" id="forget_password">忘记密码？</a>
+                                </div>
+                                <input class="input" id="login-password" placeholder="请输入密码" type="password" autocomplete="off" />
+                                <div class="msgContainer">
+                                    <p class="msg-login">请输入正确的密码</p>
+                                </div>
+                            </dd>
+                            <dd class="idcContainer ">
+                                <div class="blank">
+                                    <span>验证码</span>
+                                    <img src="../image/yanzhengma.png">
+                                </div>
+                                <img src="" alt="验证码" id="idcPic">
+                                <h4>请输入上图中的验证码(点击图像更换)</h4>
+                                <input class="input" id="idcInput" placeholder="请输入验证码" type="text" autocomplete="off" />
+                            </dd>    
+                            <dd>
+                                <input class="summit_button"  type="submit" value="登陆" >
+                            </dd>
+                        </dl>    
+                    </form>
+                </div>  
+                <div class="container hide">
+                    <form action="" method="POST" name="signinForm">
+                        <dl>
+                            <dd class="input_container">
+                                <div class="blank">
+                                    <span>用户名</span> 
+                                    <img src="../image/account.png">
+                                </div>
+                                <input class="input" id="username" placeholder="请输入用户名" type="text" autocomplete="off" />
+                                <div class="msgContainer">
+                                    <p class="msg-signin">请输入您的用户名</p>
+                                </div>
+                            </dd>
+                            <dd class="input_container">
+                                <div class="blank">
+                                    <span>账号</span> 
+                                    <img src="../image/account.png">
+                                </div>
+                                <input class="input" id="signin-account" placeholder="请输入邮箱或者手机号" type="text" />
+                                <div class="msgContainer">
+                                    <p class="msg-signin">请输入正确的手机或者邮箱</p>
+                                </div>
+                            </dd>
+                            <dd class="input_container">
+                                <div class="blank">
+                                    <span>密码</span>
+                                    <img src="../image/password.png">
+                                </div>
+                                <input class="input" id="signin-password" placeholder="请输入密码" type="password" />
+                                
+                                <div class="msgContainer">
+                                    <p class="msg-signin">请输入密码</p>
+                                </div>
+                            </dd>
+                            <dd class="input_container">
+                                <div class="blank">
+                                    <span>确认密码</span>
+                                    <img src="../image/password.png">
+                                </div>
+                                <input class="input" id="commitPassword" placeholder="请输入密码" type="password" />
+                                <div class="msgContainer">
+                                    <p class="msg-signin">请再次输入密码</p>
+                                </div>
+                            </dd>
+                            <dd class="password-view">
+                                
+                            </dd>
+                                
+                            <dd>
+                                <input class="summit_button" type="submit" value="注册">
+                            </dd>
+                        </dl>    
+                    </form>  
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../script/switch.js" type="text/javascript" /></script>
+    <script src="../script/ajax.js" type="text/javascript" /></script>
+    <script src="../script/login.js" type="text/javascript" /></script>
+    <script src="../script/signin.js" type="text/javascript" /></script>
+</body>
+</html>

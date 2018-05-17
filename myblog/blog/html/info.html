@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人博客系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/blog.css" />
+    <link rel="stylesheet" type="text/css" href="../style/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../style/header.css" />
+    <link rel="stylesheet" type="text/css" href="../style/info.css" />
+    <script src="../script/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <div class="root">
+        <header role="banner" class="outter-header">
+            <div class="banner-container">
+                <a class="blog-logo" href="#">
+                    blog
+                </a>
+                <nav role="navigation" class="header-navigation">
+
+                </nav>
+                <div class="search-container">
+                    <form action="" method="GET" name="search-from">
+                        <input type="text" name="search" id="search-bar" placeholder="搜索您感兴趣的博客" autocomplete="off">
+                        <button  id="search-button"><img src="../image/search.png"/ id="search-icon"></button>
+                    </form>
+                    <div class="show-search">
+
+                    </div>
+                </div>
+                <div class="user-container">
+                    <a class="first-menu" tabindex="0">
+                        
+                    </a>
+                    <div class="second-menu" tabindex="0">
+                        <ul>
+                            <li>
+                                
+                                <a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a>
+                            </li>
+                            <li>
+                                
+                                <a href=""><img class="second-menu-icon" src="../image/blog.png" alt="">我的博客</a>
+                            </li>
+                            <li><a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a></li>
+                            <li>
+                                
+                                <a href=""><img class="second-menu-icon" src="../image/logout.png" alt="">退出登陆</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main role="main">
+            <div class="main-container">
+                <header class="info-header">
+                    <div class="infor-heder-background">
+                        
+                    </div>
+                    <div class="info-header-content">
+                        <div class="head-pic">
+
+                        </div>
+                        <div class="info-header-nav">
+
+                            <span id="username">大眼啵啵啵</span>
+                            <span id="descrition">无</span>
+                            <a href="" id="edit-info">修改个人信息</a>
+                        </div>
+                        
+                    </div>
+                    
+                </header>
+
+                <div class="info-main-container">
+                    <nav class="info-main-nav">
+                            <ul>
+                                <li><a href="">
+                                        我的博客
+                                        <span class="number">0</span>
+                                    </a>
+                                </li>
+                                <li><a href="">
+                                        收到的评论
+                                        <span class="number">0</span>
+                                    </a>
+                                </li>
+                                <li><a href="">
+                                        发出的评论
+                                        <span class="number">0</span>
+                                    </a>
+                                </li>
+                                <li><a href="">
+                                        草稿
+                                        <span class="number">0</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <p id="info-header-nav-title">我的博客</p>
+                    </nav>
+                    <div class="empty-state">
+
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+    
+    <script src="../script/blog.js"></script>
+</body>
+</html>
