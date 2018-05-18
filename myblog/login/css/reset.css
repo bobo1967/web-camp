@@ -1,0 +1,28 @@
+/*
+初始化css
+*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,textarea,select,button{margin:0;padding:0;} 
+body{font:15px "Arial","Microsoft YaHei","黑体","宋体",sans-serif;} 
+a{color:#2d374b;text-decoration:none} 
+
+em{font-style:normal} 
+li{list-style:none} 
+img{border:0;vertical-align:middle} 
+table{border-collapse:collapse;border-spacing:0} 
+p{word-wrap:break-word}
+input {  outline: none;
+    resize: none;
+    border: none;
+    -webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;} 
+}
+button {border: none;
+        outline: none;
+        cursor:pointer; 
+        }
+.loading-bar {
+    height: 5px;
+    width: 1px;
+    border-radius: 3px;
+    background-color: #ed2553;
+}
+
