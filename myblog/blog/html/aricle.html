@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人博客系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../image/icon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/blog.css" />
+    <link rel="stylesheet" type="text/css" href="../style/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../style/header.css" />
+    <link rel="stylesheet" type="text/css" href="../style/article.css" />
+    <script src="../script/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <div class="root">
+        <header role="banner" class="outter-header">
+            <div class="banner-container">
+                <a class="blog-logo" href="#">
+                    <span>B L</span>
+                    <img src="../image/甜甜圈.png">
+                    <span>G</span>
+                </a>
+                <nav role="navigation" class="header-navigation">
+
+                </nav>
+                <div class="search-container">
+                    <form action="" method="GET" name="search-from">
+                        <input type="text" name="search" id="search-bar" placeholder="搜索您感兴趣的博客" autocomplete="off">
+                        <button  id="search-button"><img src="../image/search.png"/ id="search-icon"></button>
+                    </form>
+                    <div class="show-search">
+                        <div class="search-things">
+                            搜索“ <span id="search-value">我是一条很长很长的搜索</span> ”的结果
+                        </div>
+                    </div>
+                </div>
+                <div class="user-container">
+                    <a class="first-menu" tabindex="0">
+                    </a>
+                </div>
+            </div>
+            <div class="second-menu" tabindex="0">
+                    <ul>
+                        <li>
+                            
+                            <a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a>
+                        </li>
+                        <li>
+                            
+                            <a href=""><img class="second-menu-icon" src="../image/blog.png" alt="">我的博客</a>
+                        </li>
+                        <li><a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a></li>
+                        <li>
+                            
+                            <a href=""><img class="second-menu-icon" src="../image/logout.png" alt="">退出登陆</a>
+                        </li>
+                    </ul>
+            </div>
+        </header>
+        <main role="main">
+            <div class="main-container">
+                <div class="article-container">
+                    <div class="user-info">
+                    
+                        <div class="user-img">
+
+                        </div>
+                        <div class="user-name">
+                            大眼啵啵啵
+                        </div>
+                        <div class="user-descrtion">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                    <div class="article-title-container">
+                        <h1 id="article-title">
+                            如何不去上课又不被点名，在css3中有这么一个属性
+                        </h1>
+                        <div id="create-time"><span>创建时间：</span>2018-5-18 10:18</div>
+                    </div>
+                        <div id="content">
+                                在线富文本编辑器里面，做以下操作：
+
+                                选中一串文字，点击“ B ”把它加粗。
+                                把游标移到这串文字的中间，再点“ B ”。
+                                输入一些文字。
+                                在大部分其他的编辑器里面，到第二步的时候，刚才加粗的所有文字都回复了正常状态:
+                                
+                                step1: some bold text
+                                step2: some bold text
+                                step3: some inserted text bold text
+                                而知乎的编辑器的效果是这样：
+                                
+                                step1: some bold text
+                                step2: some bold text
+                                step3: some inserted text bold text
+                                从 HTML 上面看，它是把一个<b></b>节点拆成了三个节点：
+                                <b>some</b>inserted text<b>bold text</b>.
+                                
+                                问题是：在 contentEditable 上的编辑操作只能更新当前节点的文本内容，也就是说如果没有 js 干预，效果是这样：
+                                <b>some inserted text bold text</b>
+                                
+                                知乎的编辑器是怎样完成分拆动作的？
+                                监听 keypress 事件？那输入中文怎样实现？
+                                监听 change ？
+                        </div>
+                    </div>
+                </div>  
+                <div class="comment-container">
+
+                </div>
+            </div>
+        </main>
+        <footer class="root-footer">
+
+        </footer>
+    </div>
+    <script src="../script/blog.js"></script>
+</body>
+</html>

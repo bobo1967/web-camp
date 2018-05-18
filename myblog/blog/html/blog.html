@@ -5,13 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>个人博客系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../image/icon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="../style/blog.css" />
     <link rel="stylesheet" type="text/css" href="../style/reset.css" />
     <link rel="stylesheet" type="text/css" href="../style/header.css" />
     <link rel="stylesheet" type="text/css" href="../style/main.css" />
     <script src="../script/jquery-1.10.2.min.js"></script>
+    <script>
+        document.addEventListener('readystatechange',function() {
+    var state = document.readyState;
+    if('interactive' == state)  {
+        setTimeout(function() {
+       document.querySelector('.page_progress_mes').style.width = "100%";
+    },0);
+
+    }else{
+        document.querySelector('.page_progress_mes').style.transitionDuration = "0.3s";
+        document.querySelector('.page_progress_mes').style.width = "100%";
+        setTimeout(function() {document.querySelector('.page_progress_mes').style.transitionDuration = "1s";
+        document.querySelector('.page_progress_mes').style.opacity = '0';
+    },300);
+    }
+});
+    </script>
 </head>
 <body>
+    <div class="page_progress_mes"></div>
     <div class="root">
         <header role="banner" class="outter-header">
             <div class="banner-container">
@@ -29,7 +48,9 @@
                         <button  id="search-button"><img src="../image/search.png"/ id="search-icon"></button>
                     </form>
                     <div class="show-search">
-
+                        <div class="search-things">
+                            搜索“ <span id="search-value">我是一条很长很长的搜索</span> ”的结果
+                        </div>
                     </div>
                 </div>
                 <div class="user-container">
@@ -91,7 +112,7 @@
                                 <h2 class="blog-title">
                                     如何不复习高数拿到满分
                                 </h2>
-                                <p class="blog-description">
+                                <div class="blog-description">
                                     当你写一个jsp页面并运行后,观察下tomcat编译后的文件,会生成相应的*.
                                     class,也就说jsp本质上是servlet. 反编译该class文件,你会发现该文件
                                     中获取到你的请求,并处理业务逻辑,然后把结果封装为html输出.      所
@@ -99,7 +120,7 @@
                                     求后调用相应的servlet处理业务逻辑,然后结果被封装为静态文件xx.html
                                     输出.  而输出的页面怎么写呢?很麻烦吧?所以jsp的作用就是使用一个模板,用特殊占位符(比如jstl)来站位并控制简单逻辑,
                                     后台servlet处理完业务逻辑会按照相应的jsp模板替换为xx.html输出.
-                                </p>
+                                </div>
                             </div>
                             <div class="card-footer">
                                 <a href="" id="view-article">查看全文
@@ -112,7 +133,6 @@
                                     <img src="../image/people.png" alt="查看人数">
                                     查看人数：<span id="view-people">0</span></span>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -121,7 +141,9 @@
                 </div>        
             </div>
         </main>
-        
+        <footer class="root-footer">
+
+        </footer>
     </div>
     
     <script src="../script/blog.js"></script>

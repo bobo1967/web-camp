@@ -30,3 +30,4 @@ searchBar.onclick = function() {
 searchBar.onblur = function() {
     showSearch.style.display = "none";
 }
+
