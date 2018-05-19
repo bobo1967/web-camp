@@ -27,6 +27,8 @@
             }
         });
     </script>
+
+    
 </head>
 <body>
     <div class="loading-bar"></div>
@@ -59,7 +61,7 @@
                     <form method="POST" action="http://localhost:8080/test/testssServlet">
                         <dl>
                             <dd class="input_container">
-                                <div class="blank">
+                                <div class="label">
                                     <span>账号</span> 
                                     <img src="../image/account.png">
                                 </div>
@@ -69,10 +71,10 @@
                                 </div>
                             </dd>
                             <dd class="input_container">
-                                <div class="blank">
+                                <div class="label">
                                     <span>密码</span>
                                     <img src="../image/password.png">
-                                    <a href="" id="forget_password">忘记密码？</a>
+                                    <a href="" id="forget_password" tabindex="0">忘记密码？</a>
                                 </div>
                                 <input class="input" id="login-password" name="password" placeholder="请输入密码" type="password" autocomplete="off" />
                                 <div class="msgContainer">
@@ -80,7 +82,7 @@
                                 </div>
                             </dd>
                             <dd class="idcContainer ">
-                                <div class="blank">
+                                <div class="label">
                                     <span>验证码</span>
                                     <img src="../image/yanzhengma.png">
                                 </div>
@@ -95,51 +97,50 @@
                     </form>
                 </div>  
                 <div class="container container2">
-                    <div class="switch-button">注 册</div> 
-                    
+                <div class="switch-button">注 册</div> 
                 <div class="show-table">
-                        <div class="title">注册<div class="close"></div></div>
+                    <div class="title">注册<div class="close"></div></div>
                     <form action="" method="POST" name="signinForm">
                         <dl>
                             <dd class="input_container">
-                                <div class="blank">
+                                <div class="label">
                                     <span>用户名</span> 
                                     <img src="../image/account.png">
                                 </div>
                                 <input class="input" id="username" placeholder="请输入用户名" type="text" autocomplete="off" />
                                 <div class="msgContainer">
-                                    <p class="msg-signin">请输入您的用户名</p>
+                                    <p></p>
                                 </div>
                             </dd>
                             <dd class="input_container">
-                                <div class="blank">
+                                <div class="label">
                                     <span>账号</span> 
                                     <img src="../image/account.png">
                                 </div>
                                 <input class="input" id="signin-account" placeholder="请输入邮箱或者手机号" type="text" />
                                 <div class="msgContainer">
-                                    <p class="msg-signin">请输入正确的手机或者邮箱</p>
+                                    <p></p>
                                 </div>
                             </dd>
                             <dd class="input_container">
-                                <div class="blank">
+                                <div class="label">
                                     <span>密码</span>
                                     <img src="../image/password.png">
                                 </div>
                                 <input class="input" id="signin-password" placeholder="请输入密码" type="password" />
                                 
                                 <div class="msgContainer">
-                                    <p class="msg-signin">请输入密码</p>
+                                    <p></p>
                                 </div>
                             </dd>
                             <dd class="input_container">
-                                <div class="blank">
+                                <div class="label">
                                     <span>确认密码</span>
                                     <img src="../image/password.png">
                                 </div>
                                 <input class="input" id="commitPassword" placeholder="请输入密码" type="password" />
                                 <div class="msgContainer">
-                                    <p class="msg-signin">请再次输入密码</p>
+                                    <p></p>
                                 </div>
                             </dd>
                             <dd class="password-view">
@@ -156,17 +157,6 @@
             </div>
         </main>
     </div>
-
-    <script>
-            $('.switch-button').on('click', function() {
-          $('.container2').addClass('active');
-        });
-        
-        $('.close').on('click', function() {
-          $('.container').stop().removeClass('active');
-        });
-            
-    </script>
     <script src="../script/switch.js" type="text/javascript" /></script>
     <script src="../script/ajax.js" type="text/javascript" /></script>
     <script src="../script/login.js" type="text/javascript" /></script>
