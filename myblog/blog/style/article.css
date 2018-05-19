@@ -32,6 +32,7 @@ body {
 }
 .content-container {
     
+    margin: 0 auto;
 }
 
 .article-title-container {
@@ -64,6 +65,18 @@ h1 {
     font-size: 2em;
     line-height: 1.5em;
 }
+
+.comment-container {
+    height: auto;
+    width: 100%;
+
+}   
+.comment-card {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px dashed #f6f6f6;
+}
+
 
 @media screen and (max-width:500px) {
     h1 {

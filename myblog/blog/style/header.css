@@ -89,7 +89,6 @@ header {
 .user-container {
     height: 40px;
     width: 40px;
-    
 }
 .first-menu {
     border-radius: 50%;
@@ -104,7 +103,7 @@ header {
 }
 .second-menu {
     position: absolute;
-    top: 72px; right: 10%;
+    top: 72px; right: 10.5%;
     margin:  0 -60px;
     height: auto; width: 150px;
     background-color: #fff;
@@ -122,7 +121,7 @@ header {
     border-bottom-color: #fff;
     position: absolute;
     top: -20px;
-    left: 56px;
+    left: 65px;
      
 }
    
@@ -138,12 +137,14 @@ header {
     height: 47px;
     text-align: center;
     margin: 0 auto;
-    transition: background-color .3s, padding .7s;
-    
+    transition: background-color .3s, padding .7s; 
 }
 .second-menu a {
+    
+    text-align: left;
     display: inline-block;
-    width: 100%;
+    width: 100px;
+    
     line-height: 50px;
 }
 .second-menu li:hover {
@@ -176,10 +177,20 @@ header {
     .user-container {
         height: 30px;
         width: 30px;
+        
+    }
+    .first-menu {
+        background-image: url(../image/menu.png);
+        border-radius: 0;
+        border: 0;
     }
     .second-menu {
         width: 100%;
         right:  0;
         margin: 0;
+        top: 60px;
+    }
+    .second-menu::before {
+        display: none;
     }
 }

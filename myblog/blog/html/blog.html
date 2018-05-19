@@ -11,26 +11,8 @@
     <link rel="stylesheet" type="text/css" href="../style/header.css" />
     <link rel="stylesheet" type="text/css" href="../style/main.css" />
     <script src="../script/jquery-1.10.2.min.js"></script>
-    <script>
-        document.addEventListener('readystatechange',function() {
-    var state = document.readyState;
-    if('interactive' == state)  {
-        setTimeout(function() {
-       document.querySelector('.page_progress_mes').style.width = "100%";
-    },0);
-
-    }else{
-        document.querySelector('.page_progress_mes').style.transitionDuration = "0.3s";
-        document.querySelector('.page_progress_mes').style.width = "100%";
-        setTimeout(function() {document.querySelector('.page_progress_mes').style.transitionDuration = "1s";
-        document.querySelector('.page_progress_mes').style.opacity = '0';
-    },300);
-    }
-});
-    </script>
 </head>
 <body>
-    <div class="page_progress_mes"></div>
     <div class="root">
         <header role="banner" class="outter-header">
             <div class="banner-container">
@@ -57,38 +39,98 @@
                     <a class="first-menu" tabindex="0">
                         
                     </a>
-                    <div class="second-menu" tabindex="0">
-                        <ul>
-                            <li>
-                                
-                                <a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a>
-                            </li>
-                            <li>
-                                
-                                <a href=""><img class="second-menu-icon" src="../image/blog.png" alt="">我的博客</a>
-                            </li>
-                            <li><a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a></li>
-                            <li>
-                                
-                                <a href=""><img class="second-menu-icon" src="../image/logout.png" alt="">退出登陆</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
+            <div class="second-menu" tabindex="0">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/info.png" alt="">
+                            个人信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/blog.png" alt="">
+                            我的博客
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/info.png" alt="">
+                            评论
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/logout.png" alt="">
+                            退出登陆</a>
+                    </li>
+                </ul>
+            </div>
         </header>
-        
         <main role="main">
             <div class="main-container">
                 <div class="blog-container">
                     <header role="inner-header" class="inner-header">
-                        <nav role="navigation" class="inner-nav">
-                            <ul class="inner-nav-ul">
-                                <li><a href="">新建文章</a></li>
-                                <li><a href="">我的文章</a></li>
-                                <li><a href="">查看评论</a></li>
-                                <li><a href="">草稿</a></li>
-                            </ul>
+                        <div class="view-method">
+                            <span>#热门标签#</span>
+                            <a href="">-根据时间顺序查看-</a>
+                        </div>
+                        <nav role="navigation" class="inner-nav">                            
+                            <div class="tag">
+                                <ul class="inner-nav-ul">
+                                    <li>
+                                        <a href="">java</a>
+                                    </li>
+                                    <li>
+                                        <a href="">jq</a>
+                                    </li>
+                                    <li>
+                                        <a href="">html5</a>
+                                    </li>
+                                    <li>
+                                        <a href="">css3</a>
+                                    </li>
+                                    <li>
+                                        <a href="">c语言</a>
+                                    </li>
+                                    <li>
+                                        <a href="">java</a>
+                                    </li>
+                                    <li>
+                                        <a href="">jq</a>
+                                    </li>
+                                    <li>
+                                        <a href="">html5</a>
+                                    </li>
+                                    <li>
+                                        <a href="">css3</a>
+                                    </li>
+                                    <li>
+                                        <a href="">c语言</a>
+                                    </li>
+                                    <li>
+                                        <a href="">java</a>
+                                    </li>
+                                    <li>
+                                        <a href="">jq</a>
+                                    </li>
+                                    <li>
+                                        <a href="">html5</a>
+                                    </li>
+                                    <li>
+                                        <a href="">css3</a>
+                                    </li>
+                                    <li>
+                                        <a href="">c语言</a>
+                                    </li>
+                                </ul>
+                                <button class="show-button">
+                                    <span>收起</span>
+                                    <img src="../image/downArrow.png" alt="">
+                                </button>
+                            </div>
                         </nav>
                     </header>
                     <div class="card-container">
@@ -141,11 +183,19 @@
                 </div>        
             </div>
         </main>
-        <footer class="root-footer">
-
+        <footer role="footer" class="root-footer">
+            <div class="footer-logo" href="#">
+                <span>Inf</span>
+                <img src="../image/甜甜圈.png">
+                
+            </div>
+            <div class="footer-content">
+                <span>GuangDong University Of Technology, GUANGZHOU, CHINA | </span>
+                <span>Email: 1215373008@qq.com | Tel: 123-456-7890</span>
+                <h5>© 2018 by Edison.C. Proudly created with</h5>
+            </div>
         </footer>
     </div>
-    
     <script src="../script/blog.js"></script>
 </body>
 </html>

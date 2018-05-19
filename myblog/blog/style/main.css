@@ -26,19 +26,78 @@
     border-radius: 3px;
     margin: 0 0 10px 0;
 }
+.view-method {
+    letter-spacing: 2px;
+    position: relative;
+    height: auto;
+    width: 98%;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 1.3em;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 20px 0 15px 0;
+}
+.view-method span {
+    padding: 0 10px;
+}
+.view-method a {
+    position: absolute;
+    letter-spacing: 0;
+    right: 5px;
+    bottom: 10px;
+    font-size: .6em;
+    color: blue;
+}
+
+
+
 .inner-nav {
     height: auto;
-    padding: 25px 0;
-    font-size: 15px;
+    padding: 15px 0;
 }
 .inner-nav-ul {
-    
+    display: flex;
+    padding:  10px 20px;
+    flex-wrap: wrap;
 }
-
 .inner-nav-ul li {
-    display: inline-block;
+    width: auto;
+    height: 20px;
+    margin: 0 35px 20px 0;
+    line-height: 20px;
+    position: relative;
 }
-
+.inner-nav-ul li::after {
+    content: "";
+    height: 0; width: 0;
+    border: 11px solid transparent;
+    border-left-color: #ff7b9e79;
+    position: absolute; 
+    top: 0px;
+    right: -28px;
+}
+.inner-nav-ul a {
+    text-align: center;
+    color: #fff;
+    display: block;
+    height: 100%;
+    padding: 1px 1px 1px 5px;
+    width: 100%;
+    font-size: .7em;
+    background-color: #ff7b9e79;
+    border-radius: 2px 1px 1px 2px;
+}
+.show-button {
+    background-color: transparent;
+}
+.show-button span {
+    color: rgba(11, 11, 255, 0.637);
+    font-size: 1em;
+    font-weight: 600;
+}
+.show-button img {
+    height: 15px;
+}
 .card-container {
     width: 100%;
     height: auto;
@@ -204,4 +263,44 @@
     opacity: 1;
     -webkit-transform: scale(10);
     transform: scale(10);
+}
+
+.root-footer {
+    background-color: rgb(161, 161, 160);
+    background-color: rgb(216, 208, 208);
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.footer-logo {
+    letter-spacing: 2px;
+    display: inline-block;
+    font-size: 3em;
+    color: #f27596;
+    font-weight: 800;
+    margin: 0 auto;
+    height: auto;
+    width: auto;
+    position: relative;
+    line-height: 1em;
+}
+.footer-logo img {
+    height: .9em;
+    margin-left: -10px;
+}
+
+.footer-content {
+    height: auto; width: 65%;
+    margin: 30px auto 0 auto; padding: 0;    
+}
+.footer-content span{
+    font-size: 1em;
+    margin: 0 auto; padding: 0;
+      
+}
+.footer-content h5 {
+    font-size: .8em;
+    margin: 0; padding: 0;
+    margin-top: 30px;
 }
