@@ -125,6 +125,53 @@ body{
     z-index: -1;
 }
 
+/*
+底部栏
+*/
+.root-footer {
+    overflow: hidden;
+    height: 180px;
+    background-color: #fff;
+    padding: 0 0 10px 0;
+    text-align: left;
+    color: #999;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.footer-logo {
+    float: right;
+    letter-spacing: 2px;
+    font-size: 18em;
+    color: #f27596;
+    font-weight: 800;
+    margin: 0 auto;
+    height: auto;
+    width: auto;
+    margin-right: 20px;
+    margin-top: -10px;
+    line-height: 1em;
+    padding: 0;
+}
+.footer-logo img {
+    height: .9em;
+    margin-left: -8%;
+}
+
+.footer-content {
+    height: auto; width: 90%;
+    margin: 40px auto 0 auto; padding: 0;    
+}
+.footer-content p{
+    
+    padding: 10px 0;
+    font-size: 1.1em;
+    margin: 0 auto; 
+      
+}
+.footer-content h5 {
+    font-size: .8em;
+    margin: 0; padding: 0;
+    margin: 15px 0 0 0;
+}
 
 
 

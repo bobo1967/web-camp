@@ -17,7 +17,9 @@
         <header role="banner" class="outter-header">
             <div class="banner-container">
                 <a class="blog-logo" href="#">
-                    blog
+                    <span>B L</span>
+                    <img src="../image/甜甜圈.png">
+                    <span>G</span>
                 </a>
                 <nav role="navigation" class="header-navigation">
 
@@ -59,20 +61,74 @@
         <main role="main">
             <div class="main-container">
                 <header class="info-header">
-                    <div class="infor-heder-background">
+                    <div class="infor-header-background">
                         
                     </div>
-                    <div class="info-header-content">
-                        <div class="head-pic">
-
-                        </div>
-                        <div class="info-header-nav">
-
-                            <span id="username">大眼啵啵啵</span>
-                            <span id="descrition">无</span>
-                            <a href="" id="edit-info">修改个人信息</a>
-                        </div>
-                        
+                    <div class="info-header-container">
+                        <div class="info-header-content">
+                            <div class="head-pic">
+                                <img src="../image/甜甜圈.png" alt="">
+                            </div>
+                            <div class="user-info-container">
+                                <div class="user-info-content">
+                                    
+                                    <span id="username">大眼波波波</span>
+                                    <div id="descrition"> - <span>合作，问题，请联系邮箱</span></div>
+                                    
+                                    <button id="edit-info-button">修改个人信息</button>
+                                </div>
+                                <div class="edit-info-container" style="display: none;"> 
+                                <form action="">
+                                <ul>
+                                    <li>
+                                    <span>真实姓名：</span>
+                                    <input type="text" class="edit-info-input" id="real-name" value="陈子锋">
+                                    </li>
+                                    <li>
+                                    <span>QQ：</span>
+                                    <input type="text" class="edit-info-input" id="qq" value="(空空如野)">
+                                    </li>
+                                    <li>
+                                    <span>生日：</span>
+                                    <input type="text" class="edit-info-input" id="birthday" value="">
+                                    </li>
+                                    <li>
+                                    <span>教育经历：</span>
+                                    <input type="text" class="edit-info-input" id="school" value="">
+                                    </li>
+                                    <li>
+                                    <span>工作经历：</span>
+                                    <input type="text" class="edit-info-input" id="job" value="">
+                                    </li>
+                                    <li>
+                                    <span>性别：</span>
+                                    <input type="text" class="edit-info-input" id="sex">
+                                    </li>
+                                    <li>
+                                    <span>邮箱：</span>
+                                    <input type="text" class="edit-info-input" id="email">
+                                    </li>
+                                    <li>
+                                    <span>个人简介：</span>
+                                    <input type="text" id="user-description" class="edit-info-input">
+                                    </li>
+                                    <li>
+                                    <button type="submit" id="commit-edit-button">确认修改</button>
+                                </ul>
+                                </form>
+                                </div>                
+                            </div>
+                        </div>    
+                        <div class="user-info-footer">
+                            <button class="view-fullInfo-button" id="show-button">
+                                <span>-查看完整资料</span>
+                                <img src="../image/downArrow.png" alt="">
+                            </button>           
+                            <button class="view-fullInfo-button" id="hide-button" style="display: none;">
+                                <span>收起</span>
+                                <img src="../image/upArrow.png" alt="">
+                            </button> 
+                        </div>   
                     </div>
                     
                 </header>
@@ -103,15 +159,52 @@
                             </ul>
                             <p id="info-header-nav-title">我的博客</p>
                     </nav>
-                    <div class="empty-state">
+                    <div class="empty-sta" >
+                        <!--
+                        <div class="blog-container card">
+                            <ul>
+                                <li>
+                                    <div class="blog-title">
+                                        <h2>如何不复习高数拿到满分</h2>
+                                    </div>
+                                    <div class="blog-details">
+                                        <span>浏览人数：<span>0</span></span>
+                                        <span>评论：<span>0</span></span>
+                                        <span>创建时间：<span>2018-5-20 15:35</span></span>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        -->
+                        <div class="send-comment-container card">
 
+                        </div>
+                        <div class="rec-comment-container card">
+
+                        </div>
+                        
+                        <footer class="card-footer">
+
+                        </footer>
                     </div>
+                    
                 </div>
             </div>
         </main>
-        
+        <footer role="footer" class="root-footer">
+            <div class="footer-logo" href="#">
+                <span>Inf</span>
+                <img src="../image/甜甜圈.png">
+            </div>
+            <div class="footer-content">
+                <p>GuangDong University Of Technology, GUANGZHOU, CHINA | </p>
+                <p>Email: 1215373008@qq.com | Tel: 123-456-7890</p>
+                <h5>© 2018 by Edison.C. Proudly created with</h5>
+            </div>
+        </footer>
     </div>
     
-    <script src="../script/blog.js"></script>
+    <script src="../script/info.js"></script>
 </body>
 </html>

@@ -49,8 +49,16 @@
                 </div>     
             </div>
         </main>
-        <footer>
-
+        <footer role="footer" class="root-footer">
+            <div class="footer-logo" href="#">
+                <span>Inf</span>
+                <img src="../image/甜甜圈.png">
+            </div>
+            <div class="footer-content">
+                <p>GuangDong University Of Technology, GUANGZHOU, CHINA | </p>
+                <p>Email: 1215373008@qq.com | Tel: 123-456-7890</p>
+                <h5>© 2018 by Edison.C. Proudly created with</h5>
+            </div>
         </footer>
     </div>
     <script type="text/javascript" src="../script/wangEditor.js"></script>
@@ -77,8 +85,8 @@
             'redo'  // 重复
 
         ]
-
-        editor.create()
+        editor.customConfig.uploadImgServer = '/upload';
+        editor.create();
         
         editor.customConfig.onchange = function(html){
             alert();

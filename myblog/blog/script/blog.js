@@ -30,4 +30,20 @@ searchBar.onclick = function() {
 searchBar.onblur = function() {
     showSearch.style.display = "none";
 }
+/**
+ * 更多标签
+ */
+var hideButton = document.getElementById("hide-button");
+var showButton = document.getElementById("show-button");
+var tagContainer = document.getElementsByClassName("inner-nav")[0];
+showButton.onclick = function() {
+    showButton.style.display = "none";
+    hideButton.style.display = "block";
+    tagContainer.style.height = "auto";
+};
 
+hideButton.onclick = function() {
+    showButton.style.display = "block";
+    hideButton.style.display = "none";
+    tagContainer.style.height = "30px";
+};

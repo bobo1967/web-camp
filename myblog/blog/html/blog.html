@@ -22,7 +22,11 @@
                     <span>G</span>
                 </a>
                 <nav role="navigation" class="header-navigation">
-
+                    <ul>
+                        <li><a href="">首页</a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
                 </nav>
                 <div class="search-container">
                     <form action="" method="GET" name="search-from">
@@ -71,11 +75,57 @@
         </header>
         <main role="main">
             <div class="main-container">
+                <div class="sidebar-container">
+                    <header class="side-bar-header">
+                        <h3>
+                            -快速工具栏-
+                        </h3>
+                    </header>
+                    <nav class="side-bar-nav">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <img src="../image/创建.png" alt="">
+                                        <span>发表博客</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="../image/comment.png" alt="">
+                                        <span>最新评论</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="../image/people.png" alt="">
+                                        <span>个人信息</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="../image/people.png" alt="">
+                                        <span>我的博客</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <img src="../image/people.png" alt="">
+                                        <span>我的草稿</span>
+                                        </a>
+                                    </li>
+                                <li>
+                                    <a href="">
+                                        <img src="../image/修 改.png" alt="">
+                                        <span>修改密码</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                </div>
                 <div class="blog-container">
                     <header role="inner-header" class="inner-header">
-                        <div class="view-method">
+                        <div class="inner-header-title">
                             <span>#热门标签#</span>
-                            <a href="">-根据时间顺序查看-</a>
                         </div>
                         <nav role="navigation" class="inner-nav">                            
                             <div class="tag">
@@ -126,12 +176,23 @@
                                         <a href="">c语言</a>
                                     </li>
                                 </ul>
-                                <button class="show-button">
-                                    <span>收起</span>
-                                    <img src="../image/downArrow.png" alt="">
-                                </button>
                             </div>
                         </nav>
+                        <div class="inner-header-footer">
+                            <div class="view-method">
+                                <span>-根据时间顺序查看-</span>
+                            </div>
+                            <div class="show-hide-button">
+                                <div id="show-button" >
+                                    <span>展开</span>
+                                    <img src="../image/downArrow.png" alt="">
+                                </div>
+                                <div id="hide-button" style="display: none;">
+                                    <span>收起</span>
+                                    <img src="../image/upArrow.png" alt="">
+                                </div>
+                            </div>
+                        </div>
                     </header>
                     <div class="card-container">
                         <div class="card">
@@ -161,7 +222,7 @@
                                     以访问的页面都是发送的请求,而不是静态的xx.jsp文件,拦截器拦截到该请
                                     求后调用相应的servlet处理业务逻辑,然后结果被封装为静态文件xx.html
                                     输出.  而输出的页面怎么写呢?很麻烦吧?所以jsp的作用就是使用一个模板,用特殊占位符(比如jstl)来站位并控制简单逻辑,
-                                    后台servlet处理完业务逻辑会按照相应的jsp模板替换为xx.html输出.
+                                    后台servlet处理完业务逻辑会按照相应的jsp模板替换为xx.html输出.....
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -173,25 +234,25 @@
                                     评论：<span id="comment-people">0</span></a>
                                 <span>
                                     <img src="../image/people.png" alt="查看人数">
-                                    查看人数：<span id="view-people">0</span></span>
+                                    查看人数：<span id="view-people">0</span>
+                                </span>
+                                <span class="create-time">2018/5/20 18:47</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="sidebar-container">
-
-                </div>        
+                        
             </div>
         </main>
         <footer role="footer" class="root-footer">
+
             <div class="footer-logo" href="#">
                 <span>Inf</span>
-                <img src="../image/甜甜圈.png">
-                
+                <img src="../image/甜甜圈.png">    
             </div>
             <div class="footer-content">
-                <span>GuangDong University Of Technology, GUANGZHOU, CHINA | </span>
-                <span>Email: 1215373008@qq.com | Tel: 123-456-7890</span>
+                <p>GuangDong University Of Technology, GUANGZHOU, CHINA | </p>
+                <p>Email: 1215373008@qq.com | Tel: 123-456-7890</p>
                 <h5>© 2018 by Edison.C. Proudly created with</h5>
             </div>
         </footer>

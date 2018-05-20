@@ -1,23 +1,23 @@
 .main-container {
-    display: flex;
+   
     width: 80%; height: auto;
     margin: 70px auto;
+   
+}
+.main-container::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .blog-container {
-    margin-right: 10px;
-    height: auto;
-    width: 60%;
+    float: left;
     
+    height: auto;
+    width:69%;
+    margin: 0 auto;
+}
 
-}
-.sidebar-container {
-    width: 40%;
-    height: 200px;
-    background-color: #fff;
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(26,26,26,.1);
-}
 .inner-header {
     width: 100%;
     height: auto;
@@ -26,7 +26,8 @@
     border-radius: 3px;
     margin: 0 0 10px 0;
 }
-.view-method {
+
+.inner-header-title {
     letter-spacing: 2px;
     position: relative;
     height: auto;
@@ -37,22 +38,14 @@
     border-bottom: 1px solid #f6f6f6;
     padding: 20px 0 15px 0;
 }
-.view-method span {
+.inner-header-title span {
     padding: 0 10px;
 }
-.view-method a {
-    position: absolute;
-    letter-spacing: 0;
-    right: 5px;
-    bottom: 10px;
-    font-size: .6em;
-    color: blue;
-}
-
 
 
 .inner-nav {
-    height: auto;
+    height: 30px;
+    overflow: hidden;
     padding: 15px 0;
 }
 .inner-nav-ul {
@@ -63,39 +56,57 @@
 .inner-nav-ul li {
     width: auto;
     height: 20px;
-    margin: 0 35px 20px 0;
+    margin: 0 23px 15px 0;
     line-height: 20px;
     position: relative;
 }
-.inner-nav-ul li::after {
-    content: "";
-    height: 0; width: 0;
-    border: 11px solid transparent;
-    border-left-color: #ff7b9e79;
-    position: absolute; 
-    top: 0px;
-    right: -28px;
-}
+
 .inner-nav-ul a {
+    border-radius: 20px;
     text-align: center;
-    color: #fff;
+    color: #ff7b9e79;
     display: block;
     height: 100%;
-    padding: 1px 1px 1px 5px;
+    padding: 2px 5px;
     width: 100%;
     font-size: .7em;
-    background-color: #ff7b9e79;
-    border-radius: 2px 1px 1px 2px;
+    letter-spacing: 1px;
+    border: 1px solid #ff7b9e79;
+    color: #000000;
 }
-.show-button {
+.inner-nav-ul a:hover {
+    border-color: #db698779;
+    
+}
+.inner-header-footer {
+    padding: 10px 0 0 0;
+    margin: 0 auto;
+    width: 95%;
+    height: 30px;
+    border-top: 1px solid #f6f6f6;
+}
+.inner-header-footer::after {
+    clear: both;
+    content: "";
+}
+.view-method {
+    float: left;
+    width: auto;
+    cursor: pointer;
+    color: #00a1d6;
+    font-size: .9em;
+}
+.show-hide-button {
+    float: right;
+    cursor: pointer;
     background-color: transparent;
-}
-.show-button span {
-    color: rgba(11, 11, 255, 0.637);
+    width: auto;
+    
     font-size: 1em;
     font-weight: 600;
 }
-.show-button img {
+
+.show-hide-button img {
     height: 15px;
 }
 .card-container {
@@ -188,9 +199,7 @@
     color: rgba(0,0,0,0.38);
 
 }
-.blog-info{
 
-}
 .blog-title {
     padding: 10px 0;
     letter-spacing: 1px;
@@ -220,7 +229,12 @@
     vertical-align: middle;
     
 }
-
+.create-time {
+    font-size: .9em;
+    color:#999;
+    float: right;
+    margin-top: 8px;
+}
 
 
 #view-article {
@@ -265,42 +279,19 @@
     transform: scale(10);
 }
 
-.root-footer {
-    background-color: rgb(161, 161, 160);
-    background-color: rgb(216, 208, 208);
-    padding: 10px 0;
-    text-align: center;
-    color: #fff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.footer-logo {
-    letter-spacing: 2px;
-    display: inline-block;
-    font-size: 3em;
-    color: #f27596;
-    font-weight: 800;
-    margin: 0 auto;
-    height: auto;
-    width: auto;
-    position: relative;
-    line-height: 1em;
-}
-.footer-logo img {
-    height: .9em;
-    margin-left: -10px;
-}
 
-.footer-content {
-    height: auto; width: 65%;
-    margin: 30px auto 0 auto; padding: 0;    
-}
-.footer-content span{
-    font-size: 1em;
-    margin: 0 auto; padding: 0;
-      
-}
-.footer-content h5 {
-    font-size: .8em;
-    margin: 0; padding: 0;
-    margin-top: 30px;
+
+
+@media screen and (max-width: 536px){
+    .main-container {
+        width: 100%;
+    }
+    .blog-container {
+        width: 95%;
+
+        float: none;
+    }
+    
+
+
 }
