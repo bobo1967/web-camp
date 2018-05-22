@@ -1,8 +1,9 @@
 var hideButton = document.getElementById("hide-button");
 var showButton = document.getElementById("show-button");
 var editInfo = document.getElementsByClassName("edit-info-container")[0];
+var editInfoButton = document.getElementById("edit-info-button");
 
-showButton.onclick = function() {
+editInfoButton.onclick=showButton.onclick = function() {
     showButton.style.display = "none";
     editInfo.style.display = "block";
     hideButton.style.display = "block";
@@ -14,3 +15,8 @@ hideButton.onclick = function() {
     hideButton.style.display = "none";
     editInfo.style.display = "none";
 };
+
+
+
+
+

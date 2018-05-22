@@ -3,27 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>个人博客系统</title>
+    <title>myblog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../image/icon.ico">
-    <link rel="stylesheet" type="text/css" media="screen" href="../style/blog.css" />
     <link rel="stylesheet" type="text/css" href="../style/reset.css" />
     <link rel="stylesheet" type="text/css" href="../style/header.css" />
     <link rel="stylesheet" type="text/css" href="../style/article.css" />
-    <script src="../script/jquery-1.10.2.min.js"></script>
+    <script src="../script/jquery-1.10.2.min.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="root">
-        <header role="banner" class="outter-header">
+        <header class="outter-header">
             <div class="banner-container">
                 <a class="blog-logo" href="#">
                     <span>B L</span>
-                    <img src="../image/甜甜圈.png">
+                    <img src="../image/logo.png">
                     <span>G</span>
                 </a>
-                <nav role="navigation" class="header-navigation">
-
-                </nav>
                 <div class="search-container">
                     <form action="" method="GET" name="search-from">
                         <input type="text" name="search" id="search-bar" placeholder="搜索您感兴趣的博客" autocomplete="off">
@@ -31,34 +27,45 @@
                     </form>
                     <div class="show-search">
                         <div class="search-things">
-                            搜索“ <span id="search-value">我是一条很长很长的搜索</span> ”的结果
+                            搜索“ <span id="search-value">我是一条很长的搜索</span> ”的结果
                         </div>
                     </div>
                 </div>
                 <div class="user-container">
                     <a class="first-menu" tabindex="0">
+                        <img src="" alt="">
                     </a>
                 </div>
             </div>
             <div class="second-menu" tabindex="0">
-                    <ul>
-                        <li>
-                            
-                            <a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a>
-                        </li>
-                        <li>
-                            
-                            <a href=""><img class="second-menu-icon" src="../image/blog.png" alt="">我的博客</a>
-                        </li>
-                        <li><a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a></li>
-                        <li>
-                            
-                            <a href=""><img class="second-menu-icon" src="../image/logout.png" alt="">退出登陆</a>
-                        </li>
-                    </ul>
+                <ul>
+                    <li>
+                        <a href="../html/info.html">
+                            <img class="second-menu-icon" src="../image/info.png" alt="">
+                            个人信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/info.html">
+                            <img class="second-menu-icon" src="../image/blog.png" alt="">
+                            我的博客
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../html/info.html">
+                            <img class="second-menu-icon" src="../image/comment2.png" alt="">
+                            评论
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/logout.png" alt="">
+                            退出登陆</a>
+                    </li>
+                </ul>
             </div>
         </header>
-        <main role="main">
+        <main>
             <div class="main-container">
                 <div class="article-container">
                     <div class="user-info-body">
@@ -68,23 +75,23 @@
                         <div class="user-info-container">
                             <div class="user-head-container">
                                 <a href="">
-                                <img src="../image/甜甜圈.png" alt="" id="user-head">
+                                <img src="../image/logo.png" alt="" id="user-head">
                                 </a>
                             </div>
                             <div class="user-name">
                                 <span>
-                                大眼啵啵啵
+                                陈子锋
                                 </span>
                             </div>
                             <div class="user-descrition">
-                                <span>无</span>
+                                <span>计算机学院，软件工程</span>
                             </div>
                         </div>
                     </div>
                     <div class="content-container">
                     <div class="article-title-container">
                         <h1 id="article-title">
-                            如何不去上课又不被点名，在css3中有这么一个属性
+                            如何加入QG工作室
                         </h1>
                         <div id="create-time"><span>创建时间：</span>2018-5-18 10:18</div>
                     </div>
@@ -121,14 +128,10 @@
                                 </span>
                             </div>
                     <footer class="content-footer">
-                        
                         <div class="tag">
-                            
                             <ul>
                                 <li>
-                                    <a href="">
-                                        前端
-                                    </a>
+                                    <a href="">前端</a>
                                 </li>
                                 <li>
                                     <a href="">css</a>
@@ -149,7 +152,7 @@
                         <p>#评论#<span id="comment-count">102</span></p>
                         <div class="add-comment">
                             <div class="comment-body">
-                                <textarea name="comment" id="comment" cols="80" rows="5" placeholder="留下你的多情"></textarea>
+                                <textarea name="comment" id="comment" cols="80" rows="5" placeholder="留下你的评论"></textarea>
                             </div>
                             <button id="summit-comment" type="submit">评论</button>
                         </div>
@@ -157,7 +160,7 @@
                     <div class="card">
                         <div class="comment-card">
                             <div class="user-head">
-                                <img src="../image/甜甜圈.png" alt="">
+                                <img src="../image/logo.png" alt="">
                             </div>
                             <div class="comment-wrap">
                                 <div>
@@ -169,34 +172,49 @@
                                 <div class="comment-content">
                                     你这个写得也太慢了吧。
                                 </div>
+                                <div class="reply-container" style="display: none;">
+                                    <header class="reply-header">
+                                        <span id="get-reply">陈子锋</span>
+                                        回复了
+                                        <span id="sent-reply">林旭</span>
+                                        <div class="reply-time">
+                                            回复时间：<span>2018-5-52 23:02</span>
+                                        </div>
+                                    </header>
+                                    <div class="reply-content">
+                                        我觉得还行
+                                    </div>
+                                </div>
                                 <footer class="comment-footer">
-                                    <span class="comment-number">
-                                        最新回复：
-                                        <span>
-                                        0
+                                    <div>
+                                        <span class="comment-number">
+                                            最新回复：
+                                            <span>
+                                                0
+                                            </span>
                                         </span>
-                                    </span>
+                                        <span class="hide-buttom" style="display: none;">
+                                            收起
+                                        <img src="../image/upArrow.png" alt="">
+                                        </span>
+                                    </div>
                                     <div class="comment-time">
                                         评论时间：
                                         <span>
                                             2018-5-18-1:04
                                         </span>
                                     </div>
-                                    <div class="reply-container">
-                                    </div>
                                 </footer>
                             </div>
-                            
-                        
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-        <footer role="footer" class="root-footer">
+        <footer class="root-footer">
             <div class="footer-logo" href="#">
                 <span>Inf</span>
-                <img src="../image/甜甜圈.png">
+                <img src="../image/logo.png">
             </div>
             <div class="footer-content">
                 <p>GuangDong University Of Technology, GUANGZHOU, CHINA | </p>
@@ -205,6 +223,7 @@
             </div>
         </footer>
     </div>
-    <script src="../script/blog.js"></script>
+    <script src="../script/blog.js" type="text/javascript"></script>
+    <script src="../script/artcle.js" type="text/javascript"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>个人博客系统</title>
+    <title>myblog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../image/icon.ico">
     <link rel="stylesheet" type="text/css" media="screen" href="../style/blog.css" />
@@ -14,20 +14,13 @@
 </head>
 <body>
     <div class="root">
-        <header role="banner" class="outter-header">
+        <header class="outter-header">
             <div class="banner-container">
                 <a class="blog-logo" href="#">
                     <span>B L</span>
-                    <img src="../image/甜甜圈.png">
+                    <img src="../image/logo.png">
                     <span>G</span>
                 </a>
-                <nav role="navigation" class="header-navigation">
-                    <ul>
-                        <li><a href="">首页</a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                    </ul>
-                </nav>
                 <div class="search-container">
                     <form action="" method="GET" name="search-from">
                         <input type="text" name="search" id="search-bar" placeholder="搜索您感兴趣的博客" autocomplete="off">
@@ -35,45 +28,46 @@
                     </form>
                     <div class="show-search">
                         <div class="search-things">
-                            搜索“ <span id="search-value">我是一条很长很长的搜索</span> ”的结果
+                            搜索“ <span id="search-value">我是一条很长的搜索</span> ”的结果
                         </div>
                     </div>
                 </div>
                 <div class="user-container">
                     <a class="first-menu" tabindex="0">
-                        
+                        <img src="" alt="">
                     </a>
                 </div>
             </div>
             <div class="second-menu" tabindex="0">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="../html/info.html">
                             <img class="second-menu-icon" src="../image/info.png" alt="">
                             个人信息
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="../html/aricle.html">
                             <img class="second-menu-icon" src="../image/blog.png" alt="">
                             我的博客
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img class="second-menu-icon" src="../image/info.png" alt="">
+                        <a href="../html/info.html">
+                            <img class="second-menu-icon" src="../image/comment2.png" alt="">
                             评论
                         </a>
                     </li>
                     <li>
                         <a href="">
                             <img class="second-menu-icon" src="../image/logout.png" alt="">
-                            退出登陆</a>
+                            退出登陆
+                        </a>
                     </li>
                 </ul>
             </div>
         </header>
-        <main role="main">
+        <main>
             <div class="main-container">
                 <div class="sidebar-container">
                     <header class="side-bar-header">
@@ -82,48 +76,48 @@
                         </h3>
                     </header>
                     <nav class="side-bar-nav">
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <img src="../image/创建.png" alt="">
-                                        <span>发表博客</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src="../image/comment.png" alt="">
-                                        <span>最新评论</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src="../image/people.png" alt="">
-                                        <span>个人信息</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src="../image/people.png" alt="">
-                                        <span>我的博客</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src="../image/people.png" alt="">
-                                        <span>我的草稿</span>
-                                        </a>
-                                    </li>
-                                <li>
-                                    <a href="">
-                                        <img src="../image/修 改.png" alt="">
-                                        <span>修改密码</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
+                        <ul>
+                            <li>
+                                <a href="../html/edit.html">
+                                    <img src="../image/create.png" alt="">
+                                    <span>发表博客</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../html/info.html">
+                                    <img src="../image/comment.png" alt="">
+                                    <span>最新评论</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../html/info.html">
+                                    <img src="../image/people.png" alt="">
+                                    <span>个人信息</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../html/info.html">
+                                    <img src="../image/blog.png" alt="">
+                                    <span>我的博客</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../html/info.html">
+                                    <img src="../image/save.png" alt="">
+                                    <span>我的草稿</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../image/edit.png" alt="">
+                                    <span>修改密码</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="blog-container">
-                    <header role="inner-header" class="inner-header">
+                    <header class="inner-header">
                         <div class="inner-header-title">
                             <span>#热门标签#</span>
                         </div>
@@ -152,10 +146,10 @@
                                         <a href="">jq</a>
                                     </li>
                                     <li>
-                                        <a href="">html5</a>
+                                        <a href="">后台</a>
                                     </li>
                                     <li>
-                                        <a href="">css3</a>
+                                        <a href="">前端</a>
                                     </li>
                                     <li>
                                         <a href="">c语言</a>
@@ -196,22 +190,24 @@
                     </header>
                     <div class="card-container">
                         <div class="card">
-                            <div class="tag-container">
+                            <div class="card-tag-container">
                                 <ul>
                                    <li><a href="" class="tag">前端</a></li>
                                    <li><a href="" class="tag">css3</a></li>
-                                   <li><a href="" class="tag">hteeml5</a></li>
-                                   <li><a href="" class="tag">QGwwdwd</a></li>
+                                   <li><a href="" class="tag">html5</a></li>
+                                   <li><a href="" class="tag">QG</a></li>
                                 </ul>
                             </div>
                             <div class="user-info-container">
-                                <div class="user-img"></div>
+                                <div class="user-head">
+                                    <img src="../image/logo.png">
+                                </div>
                                 <div class="user-info">
-                                    <p id="user-name">大眼啵啵啵</p>
+                                    <p id="user-name">广东工业大学刘德华</p>
                                     <p id="user-description">90后，广东工业大学</p>
                                 </div>
                             </div>
-                            <div class="blog-info">
+                            <div class="card-blog-contaienr">
                                 <h2 class="blog-title">
                                     如何不复习高数拿到满分
                                 </h2>
@@ -241,14 +237,12 @@
                         </div>
                     </div>
                 </div>
-                        
             </div>
         </main>
-        <footer role="footer" class="root-footer">
-
+        <footer class="root-footer">
             <div class="footer-logo" href="#">
                 <span>Inf</span>
-                <img src="../image/甜甜圈.png">    
+                <img src="../image/logo.png">    
             </div>
             <div class="footer-content">
                 <p>GuangDong University Of Technology, GUANGZHOU, CHINA | </p>

@@ -1,6 +1,318 @@
-body {
-    background-color: #f6f6f6;
-    
+.main-container {
+    width: 80%; 
+    height: auto;
+    margin: 70px auto;   
+}
+.main-container::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
-   
+.blog-container {
+    float: left;   
+    height: auto;
+    width:69%;
+    margin: 0 auto;
+}
+
+.inner-header {
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    border-radius: 3px;
+    margin: 0 0 10px 0;
+}
+
+.inner-header-title {
+    letter-spacing: 2px;
+    position: relative;
+    height: auto;
+    width: 98%;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 1.3em;
+    border-bottom: 1px solid #f6f6f6;
+    padding: 20px 0 15px 0;
+}
+.inner-header-title span {
+    padding: 0 10px;
+}
+.inner-nav {
+    height: 30px;
+    overflow: hidden;
+    padding: 15px 0;
+}
+.inner-nav-ul {
+    display: flex;
+    padding:  10px 20px;
+    flex-wrap: wrap;
+}
+.inner-nav-ul li {
+    width: auto;
+    height: 20px;
+    margin: 0 23px 15px 0;
+    line-height: 20px;
+    position: relative;
+}
+.inner-nav-ul a {
+    border-radius: 20px;
+    text-align: center;
+    color: #ff7b9e79;
+    display: block;
+    height: 100%;
+    padding: 2px 5px;
+    width: 100%;
+    font-size: .7em;
+    letter-spacing: 1px;
+    border: 1px solid #ff7b9e79;
+    color: #000000;
+}
+.inner-nav-ul a:hover {
+    border-color: #db698779;
+}
+.inner-header-footer {
+    padding: 10px 0 0 0;
+    margin: 0 auto;
+    width: 95%;
+    height: 30px;
+    border-top: 1px solid #f6f6f6;
+}
+
+.view-method {
+    float: left;
+    width: auto;
+    cursor: pointer;
+    color: #00a1d6;
+    font-size: .9em;
+}
+.show-hide-button {
+    float: right;
+    cursor: pointer;
+    background-color: transparent;
+    width: auto;
+    font-size: 1em;
+    font-weight: 600;
+}
+.show-hide-button img {
+    height: 15px;
+}
+.card-container {
+    width: 100%;
+    height: auto;
+}
+.card {
+    background-color: #fff;
+    margin: 10px auto 0 auto;
+    height: auto;
+    padding: 15px;
+    width: auto;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+/*
+*首页预览文章的顶部标签部分
+*/
+.card-tag-container {
+    width: 100%;
+    border-bottom: 1px solid #f6f6f6;
+    height: auto;    
+}
+.card-tag-container ul {
+    display: flex;
+    padding:  0 0 10px 0;
+    flex-wrap: wrap;
+}
+.card-tag-container li {
+    width: auto;
+    height: 20px;
+    margin: 0 25px 0 0;
+    line-height: 20px;
+    position: relative;
+}
+.card-tag-container li::after {
+    content: "";
+    height: 0; 
+    width: 0;
+    border: 11px solid transparent;
+    border-left-color: #ff7b9e79;
+    position: absolute; 
+    top: 0px;
+    right: -28px;
+}
+.card-tag-container a {
+    text-align: center;
+    color: #fff;
+    display: block;
+    height: 100%;
+    padding: 1px 1px 1px 5px;
+    width: 100%;
+    font-size: 11px;
+    background-color: #ff7b9e79;
+    border-radius: 2px 1px 1px 2px;
+}
+.user-info-container {
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid #d6d0d0;
+    height: 50px;
+}
+
+.user-head {
+    display: inline-block;
+    margin:  0 7px 0 0;
+    height: 55px; width: 55px;
+    border-radius: 50%;
+    text-align: center;
+}
+.user-head img {
+    line-height: 55px;
+    height: 55px;
+}
+.user-info {
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    line-height: ;
+}
+#user-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0 0 7px 0;
+}
+#user-description {
+    font-size: .8em;
+    color: rgba(0,0,0,0.38);
+}
+
+.blog-title {
+    padding: 10px 0;
+    letter-spacing: 1px;
+    color: black;
+    border-bottom: 1px solid #f6f6f6;
+}
+.blog-description {
+    padding: 10px 0;
+    font-size: 13px;
+    line-height: 1.9em;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #f6f6f6;
+}
+.card-footer {
+    padding: 10px 0  0 0;
+    height: auto;
+    width: 100%;
+    font-size: 13px;
+    position: relative;   
+}
+
+.card-footer img {
+    height: 18px;
+    padding: 0 2px 0 10px;
+    vertical-align: middle;
+}
+.create-time {
+    font-size: .9em;
+    color:#999;
+    float: right;
+    margin-top: 8px;
+}
+
+#view-article {
+    user-select: 2;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    border: 2px solid #f27596;
+    width: 90px; height: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    border-radius: 3px;
+    background-color: transparent;
+    position: relative;
+    color: #f27596;
+    z-index: 100000;
+    margin-right: 20px;
+}
+#view-article:hover { 
+    color: #fff;   
+}
+.before {
+    content: "";
+    position: absolute;
+    left: 50%; top: 50%;
+    margin: -11px 0 0 -11px;
+    border-radius: 50%;
+    background-color: #f27596;
+    height: 20px; width: 20px;
+    transition: .3s ease;
+    opacity: 0;
+    z-index: -1;
+}
+#view-article:hover .before {
+    opacity: 1;
+    -webkit-transform: scale(10);
+    transform: scale(10);
+}
+
+/*
+*侧边栏
+*/
+.sidebar-container {
+    position: sticky;
+    top: 60px;
+    vertical-align: top;
+    float: right;
+    width: 30%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+.side-bar-header {
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #f6f6f6;
+}
+.side-bar-nav {
+    height: auto;
+}
+.side-bar-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
+}
+.side-bar-nav li {
+    padding: 20px ;
+}
+.side-bar-nav span {
+    display: block;
+    font-size: 1em;
+    line-height: 30px;
+}
+.side-bar-nav img {
+    display: block;
+    height: 30px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 536px){
+    .main-container {
+        width: 100%;
+    }
+    .blog-container {
+        width: 95%;
+        position: relative;
+        float: none;
+    }
+
+}
+

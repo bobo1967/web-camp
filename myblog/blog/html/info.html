@@ -6,7 +6,6 @@
     <title>个人博客系统</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../image/icon.ico">
-    <link rel="stylesheet" type="text/css" media="screen" href="../style/blog.css" />
     <link rel="stylesheet" type="text/css" href="../style/reset.css" />
     <link rel="stylesheet" type="text/css" href="../style/header.css" />
     <link rel="stylesheet" type="text/css" href="../style/info.css" />
@@ -14,7 +13,7 @@
 </head>
 <body>
     <div class="root">
-        <header role="banner" class="outter-header">
+        <header class="outter-header">
             <div class="banner-container">
                 <a class="blog-logo" href="#">
                     <span>B L</span>
@@ -22,7 +21,11 @@
                     <span>G</span>
                 </a>
                 <nav role="navigation" class="header-navigation">
-
+                    <ul>
+                        <li><a href="">首页</a></li>
+                        <li><a href=""></a></li>
+                        <li><a href=""></a></li>
+                    </ul>
                 </nav>
                 <div class="search-container">
                     <form action="" method="GET" name="search-from">
@@ -30,39 +33,50 @@
                         <button  id="search-button"><img src="../image/search.png"/ id="search-icon"></button>
                     </form>
                     <div class="show-search">
-
+                        <div class="search-things">
+                            搜索“ <span id="search-value">我是一条很长很长的搜索</span> ”的结果
+                        </div>
                     </div>
                 </div>
                 <div class="user-container">
                     <a class="first-menu" tabindex="0">
-                        
+                        <img src="" alt="">
                     </a>
-                    <div class="second-menu" tabindex="0">
-                        <ul>
-                            <li>
-                                
-                                <a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a>
-                            </li>
-                            <li>
-                                
-                                <a href=""><img class="second-menu-icon" src="../image/blog.png" alt="">我的博客</a>
-                            </li>
-                            <li><a href=""><img class="second-menu-icon" src="../image/info.png" alt="">个人信息</a></li>
-                            <li>
-                                
-                                <a href=""><img class="second-menu-icon" src="../image/logout.png" alt="">退出登陆</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
+            <div class="second-menu" tabindex="0">
+                <ul>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/info.png" alt="">
+                            个人信息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/blog.png" alt="">
+                            我的博客
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/comment.png" alt="">
+                            评论
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img class="second-menu-icon" src="../image/logout.png" alt="">
+                            退出登陆</a>
+                    </li>
+                </ul>
+            </div>
         </header>
-        
-        <main role="main">
+        <main>
             <div class="main-container">
                 <header class="info-header">
-                    <div class="infor-header-background">
-                        
+                    <div class="info-header-background">
+                       
                     </div>
                     <div class="info-header-container">
                         <div class="info-header-content">
@@ -71,124 +85,122 @@
                             </div>
                             <div class="user-info-container">
                                 <div class="user-info-content">
-                                    
                                     <span id="username">大眼波波波</span>
-                                    <div id="descrition"> - <span>合作，问题，请联系邮箱</span></div>
-                                    
+                                    <div id="descrition"> -
+                                        <span>合作，问题，请联系邮箱</span>
+                                    </div>
                                     <button id="edit-info-button">修改个人信息</button>
                                 </div>
-                                <div class="edit-info-container" style="display: none;"> 
-                                <form action="">
-                                <ul>
-                                    <li>
-                                    <span>真实姓名：</span>
-                                    <input type="text" class="edit-info-input" id="real-name" value="陈子锋">
-                                    </li>
-                                    <li>
-                                    <span>QQ：</span>
-                                    <input type="text" class="edit-info-input" id="qq" value="(空空如野)">
-                                    </li>
-                                    <li>
-                                    <span>生日：</span>
-                                    <input type="text" class="edit-info-input" id="birthday" value="">
-                                    </li>
-                                    <li>
-                                    <span>教育经历：</span>
-                                    <input type="text" class="edit-info-input" id="school" value="">
-                                    </li>
-                                    <li>
-                                    <span>工作经历：</span>
-                                    <input type="text" class="edit-info-input" id="job" value="">
-                                    </li>
-                                    <li>
-                                    <span>性别：</span>
-                                    <input type="text" class="edit-info-input" id="sex">
-                                    </li>
-                                    <li>
-                                    <span>邮箱：</span>
-                                    <input type="text" class="edit-info-input" id="email">
-                                    </li>
-                                    <li>
-                                    <span>个人简介：</span>
-                                    <input type="text" id="user-description" class="edit-info-input">
-                                    </li>
-                                    <li>
-                                    <button type="submit" id="commit-edit-button">确认修改</button>
-                                </ul>
-                                </form>
-                                </div>                
+                                <div class="edit-info-container" style="display: none;">
+                                    <form action="" name="edit-user-info-form">
+                                        <ul>
+                                            <li>
+                                                <span>真实姓名：</span>
+                                                <input type="text" class="edit-info-input" id="real-name" value="刘德华" autocomplete="off">
+                                            </li>
+                                            <li>
+                                                <span>QQ：</span>
+                                                <input type="text" class="edit-info-input" id="qq" value="12133333" autocomplete="off">
+                                            </li>
+                                            <li>
+                                                <span>生日：</span>
+                                                <input type="text" class="edit-info-input" id="birthday" value="" autocomplete="off">
+                                            </li>
+                                            <li>
+                                                <span>教育经历：</span>
+                                                <input type="text" class="edit-info-input" id="school" value="" autocomplete="off">
+                                            </li>
+                                            <li>
+                                                <span>工作经历：</span>
+                                                <input type="text" class="edit-info-input" id="job" value="" autocomplete="off">
+                                            </li>
+                                            <li>
+                                                <span>性别：</span>
+                                                <input type="text" class="edit-info-input" id="sex" autocomplete="off">
+                                            </li>
+                                            <li>
+                                                <span>邮箱：</span>
+                                                <input type="text" class="edit-info-input" id="email" autocomplete="off">
+                                            </li>
+                                            <li>
+                                                <span>个人简介：</span>
+                                                <input type="text" id="user-description" class="edit-info-input" autocomplete="off">
+                                            </li>
+                                            <li>
+                                            <button type="submit" id="commit-edit-button">确认修改</button>
+                                        </ul>
+                                    </form>
+                                </div>
                             </div>
-                        </div>    
+                        </div>
                         <div class="user-info-footer">
                             <button class="view-fullInfo-button" id="show-button">
                                 <span>-查看完整资料</span>
                                 <img src="../image/downArrow.png" alt="">
-                            </button>           
+                            </button>
                             <button class="view-fullInfo-button" id="hide-button" style="display: none;">
                                 <span>收起</span>
                                 <img src="../image/upArrow.png" alt="">
-                            </button> 
-                        </div>   
+                            </button>
+                        </div>
                     </div>
-                    
                 </header>
-
                 <div class="info-main-container">
                     <nav class="info-main-nav">
-                            <ul>
-                                <li><a href="">
-                                        我的博客
-                                        <span class="number">0</span>
-                                    </a>
-                                </li>
-                                <li><a href="">
-                                        收到的评论
-                                        <span class="number">0</span>
-                                    </a>
-                                </li>
-                                <li><a href="">
-                                        发出的评论
-                                        <span class="number">0</span>
-                                    </a>
-                                </li>
-                                <li><a href="">
-                                        草稿
-                                        <span class="number">0</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <p id="info-header-nav-title">我的博客</p>
+                        <ul>
+                            <li tabindex="0" class="active">
+                                <span>我的博客</span>
+                                <span class="number"> 0 </span>
+                            </li >
+                            <li tabindex="0">
+                                <span>收到的评论</span>
+                                <span class="number"> 0 </span>
+                            </li>
+                            <li tabindex="0">
+                                <span>发出的评论</span>
+                                <span class="number"> 0 </span>
+                            </li>
+                            <li tabindex="0">
+                                <span>草稿</span>
+                                <span class="number"> 0 </span>
+                            </li>
+                        </ul>
+                        <div id="info-header-nav-title">我的博客</div>
                     </nav>
                     <div class="empty-sta" >
-                        <!--
-                        <div class="blog-container card">
-                            <ul>
-                                <li>
-                                    <div class="blog-title">
-                                        <h2>如何不复习高数拿到满分</h2>
-                                    </div>
-                                    <div class="blog-details">
-                                        <span>浏览人数：<span>0</span></span>
-                                        <span>评论：<span>0</span></span>
-                                        <span>创建时间：<span>2018-5-20 15:35</span></span>
-                                    </div>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                        -->
-                        <div class="send-comment-container card">
-
-                        </div>
-                        <div class="rec-comment-container card">
-
-                        </div>
-                        
-                        <footer class="card-footer">
-
-                        </footer>
+                    <div class="blog-container card">
+                        <ul>
+                            <li>
+                                <div class="blog-title">
+                                    <h2>如何不复习高数拿到满分</h2>
+                                </div>
+                                <div class="blog-details">
+                                    <span>浏览人数：
+                                        <span>0</span>
+                                    </span>
+                                    <span>评论：
+                                        <span>0</span>
+                                    </span>
+                                    <span>创建时间：
+                                        <span>2018-5-20 15:35</span>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="send-comment-container">
                     
+                    </div>
+                    <div class="rec-comment-container">
+                        
+                    </div>
+                    <div class="save-blog-container">
+                        
+                    </div>
+                    <footer class="card-footer">
+                        
+                    </footer>
+                    </div>
                 </div>
             </div>
         </main>
@@ -204,7 +216,7 @@
             </div>
         </footer>
     </div>
-    
-    <script src="../script/info.js"></script>
+    <script type="text/javascript" src="../script/blog.js"></script>
+    <script type="text/javascript" src="../script/info.js"></script>
 </body>
 </html>

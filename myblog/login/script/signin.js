@@ -171,12 +171,46 @@ commitPassword.onblur = function() {
 }
 
 
+
 signinButton.onclick =  function() {
     isSigninEmpty();
     if (flag[0] == true && flag[1] == true && flag[2] == true && flag[3] == true) {
-        return true;
-    }
+        
+        $.ajax({
+			url: "http://localhost:8080/test/ResigerServlet",
+			type: "POST",
+			async: true,
+			data: {
+				"account": signinAccount.value,
+				"username": username.value,
+				"password": signinPassword.value
+			},
+            contentType: "application/x-www-form-urlencoded",
+            dataType: "jsonp",
+			cache: "false",
+			beforeSend: function() {
+                signinButton.value = "正在注册...";
+            },
+            success: function(flag) {
+                if (flag == "fail") {
+                    alert("注册失败");
+                else {
+                    alert("注册成功");
+                }
+            },
+            complete: function() {
+                signinButton.value = "注册";
+            }
+        });
+        
+      
+      }
+    
+    
     else {
+
         return false;
     }
 }
+
+

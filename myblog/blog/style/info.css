@@ -6,17 +6,18 @@
 
 
 .info-header {
-    background: url(../image/11.jpg) no-repeat center;
-    background-size: cover;
     width: 100%; height: auto;
     border-radius: 3px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(26,26,26,.1);
 }
-.infor-header-background {
+.info-header-background {
     height: 220px;
-    
+    width: 100%;
     border-radius: 3px 3px 0 0 ;
+    background-image: url(../image/11.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .info-header-container {
@@ -61,6 +62,7 @@
     float: left;
     margin: 0 auto;
     width: 80%;
+    height: auto;
     padding: 15px 10px 20px 20px;
 }
 .user-info-content {
@@ -80,28 +82,25 @@
 }
 #edit-info-button {
     text-align: center;
+    letter-spacing: 1px;
     font-size: .9em;
     position: absolute;
-    right: 0; bottom: 0;
+    right: 0; bottom: 10px;
     display: block;
     border-radius: 4px;
-    border: 1px solid #0084ff;
     height: 35px;
     width: 100px;
     line-height: 35px;
-    color: #0084ff;
-    background-color: transparent;
+    color: #fff;
+    background-color: #00a1d6;
 }
-
-
 .edit-info-container {
-    
     margin-top: 30px;
     color: #000;
     letter-spacing: 1px;
     font-weight: 600;
     background-color: ;
-    background-color: #;
+    background-color: #fff;
     width: 100%;
     position: relative;
 }   
@@ -144,12 +143,11 @@
     right: 0; bottom: 0;
     display: block;
     border-radius: 4px;
-    border: 1px solid #0084ff;
     height: 35px;
     width: 100px;
     line-height: 35px;
-    color: #0084ff;
-    background-color: transparent;
+    color: #fff;
+    background-color: #00a1d6;
 }
 .user-info-footer {
     width: 62%;
@@ -178,36 +176,42 @@
     background-color: #fff;
     margin: 10px auto;
     border-radius: 3px;
-    
     box-shadow: 0 1px 3px rgba(26,26,26,.1);
-
 }
 .info-main-nav {
     height: auto; width: 100%;
     
 }
 .info-main-nav li{
-    padding: 0 20px;
+    user-select: none;
+    cursor: pointer;
+    padding: 0 3px;
+    margin: 0 16px;
     float: left;
-    
-}
+    line-height: 50px;
+    font-size: 1em;
+    resize: none;
+    outline: none;
 
+}
+.active span{
+    color: #000;
+    font-weight: 600;
+}
+.number {
+    padding-left: 2px;
+    font-size: 1.1em;
+    vertical-align: middle;
+}
 .info-main-nav ul {
     border-bottom: 1px solid #f6f6f6;
     height: 50px;
 }
-.info-main-nav a {
-    padding: 15px 0;
-    line-height: 50px;
-    font-size: 15px;
 
-}
 
-.info-main-nav a:hover {
-    border-bottom: 3px solid blue;
-}
 
 #info-header-nav-title {
+    text-align: left;
     padding:  20px;
     font-size: 16px;
     font-weight: 600;
@@ -234,6 +238,9 @@
 .empty-state .card {
    
 }
+.hide {
+    display: none;
+}
 .card-footer {
     height: 100px;
 }
@@ -241,8 +248,6 @@
     width: 100%;
     height: ;
     margin: 10px auto;
-   
-    
 }
 .card ul {
     padding: 0px 20px 10px 20px;

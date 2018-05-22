@@ -1,5 +1,5 @@
 /*
-这里是顶部栏的css
+* 这里是顶部栏的css
 */
 .outter-header {
     position: fixed;
@@ -8,13 +8,8 @@
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(26,26,26,.1);
     z-index: 20000000000000000;
-    
-}
-header {
-    position: relative;
 }
 .banner-container {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +20,7 @@ header {
 }
 .blog-logo {
     display: block;
-    font-size: 30px;
+    font-size: 2em;
     color: #593123;
     font-weight: 600;
     height: 40px;
@@ -37,20 +32,12 @@ header {
     vertical-align: bottom;    
 }
 .search-container {
-    
     background-color: #f6f6f6;
     border: 1px solid #d4e2e9;
     border-radius: 5px;
     height: 35px; width: 250px;
     margin: 5px;
 }
-
-
-
-.header-navigation {
-
-}
-
 #search-bar {
     height: 100%; width: 80%;
     padding: 10px 0 10px 10px;
@@ -84,7 +71,6 @@ header {
     font-size: 12px;
     color: blue;
 }
-
 
 .user-container {
     height: 40px;
@@ -121,12 +107,8 @@ header {
     border-bottom-color: #fff;
     position: absolute;
     top: -20px;
-    left: 65px;
-     
+    left: 65px;     
 }
-   
-
-
 .second-menu ul {
     height: auto;
     margin: 10px auto;
@@ -140,11 +122,9 @@ header {
     transition: background-color .3s, padding .7s; 
 }
 .second-menu a {
-    
     text-align: left;
     display: inline-block;
     width: 100px;
-    
     line-height: 50px;
 }
 .second-menu li:hover {
@@ -155,56 +135,9 @@ header {
     padding-right: 6px;
     padding-bottom: 2px;
     vertical-align: middle;
-    
-}
-
-/*
-侧边栏
-*/
-.sidebar-container {
-    position: sticky;
-    top: 60px;
-    vertical-align: top;
-    float: right;
-    width: 30%;
-    height: auto;
-    background-color: #fff;
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(26,26,26,.1);
-}
-.side-bar-header {
-    letter-spacing: 1px;
-    font-size: 1.2em;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #f6f6f6;
-}
-.side-bar-nav {
-    height: auto;
-}
-.side-bar-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    justify-content: center;
-}
-.side-bar-nav li {
-    padding: 20px ;
-}
-.side-bar-nav span {
-    display: block;
-    font-size: 1em;
-    line-height: 30px;
-}
-.side-bar-nav img {
-    display: block;
-    height: 30px;
-    margin: 0 auto;
 }
 /*
-底部栏
+*底部栏
 */
 .root-footer {
     overflow: hidden;
@@ -252,10 +185,7 @@ header {
     margin: 0; padding: 0;
     margin: 15px 0 0 0;
 }
-
-
 @media screen and (max-width: 536px){
-
     .banner-container {
         width: 96%;
         padding: 6px 2%;
@@ -288,8 +218,10 @@ header {
         display: none;
     }
     .sidebar-container {
-        width: 100%;
+        width: 95%;
+        margin: 10px auto;
         float: none;
+        position: relative;
+        top: 0;
     }
-
 }

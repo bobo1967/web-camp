@@ -83,9 +83,7 @@ var close = document.getElementsByClassName("close")[0];
 
 switchButton.onclick = function(){
     addClass(container2, "active");
-    setTimeout(() => {
-        addClass(container, "reset");
-    }, 200);
+    setTimeout("addClass(container, 'reset')",200);
 };
 close.onclick = function(){
     removeClass(container2, "active");
@@ -94,11 +92,6 @@ close.onclick = function(){
 
 
 
-$(document).ready(function(){
-    $(loginPassword).click(function(){
-        $(idc).slideDown();
-    });
-});
 
 
 
