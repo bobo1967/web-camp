@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../image/icon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../style/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/login.css"/>
+    <script type="text/javascript" src="../script/jquery-1.10.2.min.js"></script>
+    <script>
+        document.addEventListener('readystatechange', function () {
+            var state = document.readyState;
+            if ('interactive' == state) {
+                setTimeout(function () {
+                    document.querySelector('.loading-bar').style.width = "100%";
+                }, 0);
+
+            } else {
+                document.querySelector('.loading-bar').style.transitionDuration = "0.3s";
+                document.querySelector('.loading-bar').style.width = "100%";
+                setTimeout(function () {
+                    document.querySelector('.loading-bar').style.transitionDuration = "1s";
+                    document.querySelector('.loading-bar').style.opacity = '0';
+                }, 300);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="root">
+        <div class="loading-bar"></div>
+        <header>
+            <div class="nav-container">
+                <div class="blog-logo-container">
+                    <a class="blog-logo" href="#">
+                        <span>B L</span>
+                        <img src="../image/logo.png">
+                        <span>G</span>
+                    </a>
+                </div>
+                <div>    
+                    <a href="../html/blog.html" class="visitor">游客登陆
+                        <div class="before"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="slogen-container">
+                <h1>MAKE SOMETING GREAT</h1>
+                <span>加入我们 </span>
+            </div>
+        </header>
+        <main>
+            <div class="inner-panel"></div>
+            <div class="panel">
+                <div class="title">登陆</div>
+                <div class="container ">
+                    <form>
+                        <dl>
+                            <dd class="input_container">
+                                <div class="label">
+                                    <span>账号</span> 
+                                    <img src="../image/account.png">
+                                </div>
+                                <input class="input" id="login-account" placeholder="请输入邮箱或者手机号" type="text" autocomplete="off"/>
+                                <div class="msgContainer">
+                                    <p class="msg-login">请输入正确的手机或者邮箱</p>
+                                </div>
+                            </dd>
+                            <dd class="input_container">
+                                <div class="label">
+                                    <span>密码</span>
+                                    <img src="../image/password.png">
+                                    <a href="" id="forget_password" tabindex="0">忘记密码？</a>
+                                </div>
+                                <input class="input" id="login-password"  placeholder="请输入密码" type="password" autocomplete="off" />
+                                <div class="msgContainer">
+                                    <p class="msg-login">请输入正确的密码</p>
+                                </div>
+                            </dd>
+                            <dd class="idcContainer ">
+                                <div class="label">
+                                    <span>验证码</span>
+                                    <img src="../image/yanzhengma.png">
+                                </div>
+                                <div id="idcPic">1234</div>
+                                <h4>请输入上图中的验证码(点击图像更换)</h4>
+                                <input class="input" id="idcInput" placeholder="请输入验证码" type="text" autocomplete="off" />
+                            </dd>    
+                            <dd>
+                                <input class="summit_button"  type="submit" value="登陆" >
+                            </dd>
+                        </dl>    
+                    </form>
+                </div>  
+                <div class="container container2">
+                <div class="switch-button">注 册</div> 
+                <div class="show-table">
+                    <div class="title">注册<div class="close"></div></div>
+                    <form name="signinForm">
+                        <dl>
+                            <dd class="input_container">
+                                <div class="label">
+                                    <span>用户名</span> 
+                                    <img src="../image/account.png">
+                                </div>
+                                <input class="input" id="username" placeholder="请输入用户名" type="text" autocomplete="off" />
+                                <div class="msgContainer">
+                                    <p></p>
+                                </div>
+                            </dd>
+                            <dd class="input_container">
+                                <div class="label">
+                                    <span>账号</span> 
+                                    <img src="../image/account.png">
+                                </div>
+                                <input class="input" id="signin-account" placeholder="请输入邮箱或者手机号" type="text" />
+                                <div class="msgContainer">
+                                    <p></p>
+                                </div>
+                            </dd>
+                            <dd class="input_container">
+                                <div class="label">
+                                    <span>密码</span>
+                                    <img src="../image/password.png">
+                                </div>
+                                <input class="input" id="signin-password" placeholder="请输入密码" type="password" />
+                                
+                                <div class="msgContainer">
+                                    <p></p>
+                                </div>
+                            </dd>
+                            <dd class="input_container">
+                                <div class="label">
+                                    <span>确认密码</span>
+                                    <img src="../image/password.png">
+                                </div>
+                                <input class="input" id="commitPassword" placeholder="请输入密码" type="password" />
+                                <div class="msgContainer">
+                                    <p></p>
+                                </div>
+                                <input class="summit_button" type="submit" value="注册">
+                            </dd>
+                        </dl>    
+                    </form>  
+                </div>
+                </div>
+            </div>
+            
+        </main>
+        <div class="popup-container">
+            <div id="popup">
+                <div id="popup-msg">
+                </div>
+                <div id="popup-button">确定</div>
+            </div>
+        </div>
+    </div>
+    <script src="../script/login.js" type="text/javascript"></script>
+    <script src="../script/signin.js" type="text/javascript"></script>
+</body>
+</html>

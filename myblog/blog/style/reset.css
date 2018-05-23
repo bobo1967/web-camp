@@ -36,7 +36,8 @@ input {
     resize: none;
     border: none;
 }
-button {border: none;
+button {
+        border: none;
         outline: none;
         cursor:pointer;             
 }

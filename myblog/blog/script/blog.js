@@ -1,6 +1,6 @@
+
 var firstMenu = document.getElementsByClassName("first-menu")[0];
 var secondMenu = document.getElementsByClassName("second-menu")[0];
-
 
 secondMenu.style.display = "none";
 firstMenu.onclick = function() {
@@ -47,3 +47,18 @@ hideButton.onclick = function() {
     hideButton.style.display = "none";
     tagContainer.style.height = "30px";
 };
+/**
+ * 通过模板来动态写blog
+ */
+var blogTem=document.getElementsByClassName("card")[0];
+var cardContainer = document.getElementsByClassName("card-container")[0];
+    for (var i = 0; i < 5; i++) {
+        var newCard=blogTem.cloneNode(true);
+        cardContainer.appendChild(newCard);
+        newCard.style.display = "block";
+    };
+window.onload = function() {
+   
+}
+
+

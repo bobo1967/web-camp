@@ -25,12 +25,14 @@ editor.customConfig.menus =
 editor.customConfig.uploadImgServer = '/upload';
 editor.create();
 
-editor.customConfig.onchange = function (html) {
-    alert();
-    //获取editor的html值
-    var html = editor.$txt.html();
-    $("#show_box").html(html)
+var save = document.getElementById("save");
+
+save.onclick = function() {
+    
+    alert(editor.txt.html());
 };
+
+
 
 /**
  * textarea 自动换行
@@ -40,3 +42,5 @@ var title = document.getElementById("blog-title");
 title.onkeyup = function() {
     title.style.height = this.scrollHeight + "px";
 };
+
+

@@ -200,8 +200,7 @@
     }
     .user-container {
         height: 30px;
-        width: 30px;
-        
+        width: 30px;   
     }
     .first-menu {
         background-image: url(../image/menu.png);
@@ -223,5 +222,8 @@
         float: none;
         position: relative;
         top: 0;
+    }
+    .search-things {
+        display: none;
     }
 }

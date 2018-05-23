@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../style/blog.css" />
     <link rel="stylesheet" type="text/css" href="../style/reset.css" />
     <link rel="stylesheet" type="text/css" href="../style/header.css" />
-    <link rel="stylesheet" type="text/css" href="../style/main.css" />
     <script src="../script/jquery-1.10.2.min.js"></script>
 </head>
 <body>
@@ -22,7 +21,7 @@
                     <span>G</span>
                 </a>
                 <div class="search-container">
-                    <form action="" method="GET" name="search-from">
+                    <form name="search-from">
                         <input type="text" name="search" id="search-bar" placeholder="搜索您感兴趣的博客" autocomplete="off">
                         <button  id="search-button"><img src="../image/search.png"/ id="search-icon"></button>
                     </form>
@@ -78,31 +77,31 @@
                     <nav class="side-bar-nav">
                         <ul>
                             <li>
-                                <a href="../html/edit.html">
+                                <a href="edit.html">
                                     <img src="../image/create.png" alt="">
                                     <span>发表博客</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../html/info.html">
+                                <a href="info.html">
                                     <img src="../image/comment.png" alt="">
                                     <span>最新评论</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../html/info.html">
+                                <a href="info.html">
                                     <img src="../image/people.png" alt="">
                                     <span>个人信息</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../html/info.html">
+                                <a href="info.html">
                                     <img src="../image/blog.png" alt="">
                                     <span>我的博客</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="../html/info.html">
+                                <a href="info.html">
                                     <img src="../image/save.png" alt="">
                                     <span>我的草稿</span>
                                 </a>
@@ -189,6 +188,47 @@
                         </div>
                     </header>
                     <div class="card-container">
+                        <div class="card" style="display: none">
+                            <div class="card-tag-container">
+                                <ul>
+                                    <li>
+                                        <a href="" class="tag"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="user-info-container">
+                                <div class="user-head">
+                                    <img src="../image/logo.png">
+                                </div>
+                                <div class="user-info">
+                                    <p id="user-name"></p>
+                                    <p id="user-description"></p>
+                                </div>
+                            </div>
+                            <div class="card-blog-contaienr">
+                                <h2 class="blog-title">
+                        
+                                </h2>
+                                <div class="blog-description">
+                        
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="" id="view-article">查看全文
+                                    <div class="before"></div>
+                                </a>
+                                <a href="">
+                                    <img src="../image/comment.png" alt="评论"> 评论：
+                                    <span id="comment-people"></span>
+                                </a>
+                                <span>
+                                    <img src="../image/people.png" alt="查看人数"> 查看人数：
+                                    <span id="view-people"></span>
+                                </span>
+                                <span class="create-time"></span>
+                            </div>
+                        </div>
+
                         <div class="card">
                             <div class="card-tag-container">
                                 <ul>
@@ -251,6 +291,10 @@
             </div>
         </footer>
     </div>
-    <script src="../script/blog.js"></script>
+    <script src="../script/blog.js" type="text/javascript" ></script>
+    
+    <textarea style="display: none;" id="blog-card">
+        
+    </textarea>
 </body>
 </html>
